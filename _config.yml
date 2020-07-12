@@ -36,7 +36,7 @@ staticman:
   allowedFields          : ['name', 'email', 'url', 'message', 'replying_to_uid']
   branch                 : "master" # "master", "gh-pages"
   commitMessage          : "Comment from {fields.name} on {options.slug}"
-  filename               : comment-{@timestamp}
+  filename               : comment-{@timestamp}-{@id}
   format                 : "yaml"
   # moderation             : true
   moderation             : false
