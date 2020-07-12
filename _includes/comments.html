@@ -65,7 +65,7 @@
           <fieldset class="hidden">
             <input type="hidden" name="options[slug]" value="{{ page.slug }}">
             <input type="hidden" name="fields[hidden]"/>
-            {% comment Lines below added in order to recaptcha to work endcomment %}
+            {% comment %} Lines below added in order to recaptcha to work  {% endcomment %}
             <input type="hidden" name="options[reCaptcha][siteKey]" value="{{ site.reCaptcha.siteKey }}">
             <input type="hidden" name="options[reCaptcha][secret]"  value="{{ site.reCaptcha.secret }}">
           </fieldset>
