@@ -209,10 +209,14 @@
   content: "\e861";
 }
 .ai-lattes {
-  background: url('../../images/lattes.svg')
+  background: url('../../images/lattes.svg');
+  background-size: 1.28571429em 1em;
+  height: 1em;
 }
 .ai-lattes-square {
-  background: url('../../images/lattes.svg')
+  background: url('../../images/lattes.svg');
+  background-size: 1.28571429em 1em;
+  height: 1em;
 }
 /*  Duplication of the FontAwesome style classes using 'ai' in place of 'fa'. */
 .ai-lg {
