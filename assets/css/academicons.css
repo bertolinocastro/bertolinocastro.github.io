@@ -209,10 +209,10 @@
   content: "\e861";
 }
 .ai-lattes:before {
-  content: "\e862";
+  background: url('../../images/lattes.svg')
 }
 .ai-lattes-square:before {
-  content: "\e863";
+  background: url('../../images/lattes.svg')
 }
 /*  Duplication of the FontAwesome style classes using 'ai' in place of 'fa'. */
 .ai-lg {
