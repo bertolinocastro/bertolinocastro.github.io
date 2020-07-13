@@ -59,9 +59,6 @@
             <label for="comment-form-url">{{ site.data.ui-text[site.locale].comment_form_website_label | default: "Website (optional)" }}</label>
             <input type="url" id="comment-form-url" name="fields[url]" tabindex="4"/>
           </fieldset>
-          <!-- <fieldset>
-              Send me an email when someone comments on this post.
-          </fieldset> -->
           <fieldset>
             <div id="reCaptcha" class="g-recaptcha" data-sitekey="{{ site.reCaptcha.siteKey }}"></div>
           </fieldset>
