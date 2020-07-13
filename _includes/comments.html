@@ -34,20 +34,6 @@
               {% assign message = comment[1].message %}
               {% include comment.html index=forloop.index commentid=commentid mention=mention replyname=replyname email=email name=name url=url date=date message=message %}
 
-              {% comment %} Below are replies to first posted comments {% endcomment %}
-
-              {% assign replies = allcomments | where_exp: "item", "item.replying_to == commentid" %}
-              {% for comment in replies %}
-                {% assign commentid = comment[1]._id %}
-                {% assign replyid = comment[1].replying_to %}
-                {% assign mention = comment[1].mention %}
-                {% assign email = comment[1].email %}
-                {% assign name = comment[1].name %}
-                {% assign url = comment[1].url %}
-                {% assign date = comment[1].date %}
-                {% assign message = comment[1].message %}
-                {% include comment.html index=forloop.index commentid=commentid replyid=replyid mention=mention email=email name=name url=url date=date message=message %}
-              {% endfor %}
             {% endfor %}
           {% endif %}
         </div>
