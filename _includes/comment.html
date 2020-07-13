@@ -22,6 +22,6 @@
       {% endif %}
     </p>
     {{ include.message | markdownify }}
-    <a class="comment__replybutton" onclick="replyTo('{{ include.replyid }}', '{{ include.commentid }}', '{{ include.name }}')">Click here to reply <span>{{ include.name }}</span></a>
+    <a class="comment__replybutton" onclick="replyTo('{% if include.replyid != '' %}{{ include.replyid }}{% else %}{{ include.commentid }}{% endif %}', '{{ include.commentid }}', '{{ include.name }}')">Click here to reply <span>{{ include.name }}</span></a>
   </div>
 </article>
