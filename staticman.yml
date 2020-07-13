@@ -63,7 +63,7 @@ comments:
     # Mailgun domain (encrypted)
     domain: "feWRveyO6qyAZ/Oe8BU7VMB7LtYlAd/05yjh7uX4y+NHBZTPQFpihWExpuCISfFbrvOoZT/PbvP1G3q/Wk31m6JG8nMSw0oZmYA1wBzq0NrUQDBz0HA3uIQnhUP0VQyPwQu0R2vdZHyNAZBOxSINaeh+muGomQiBEVWW15MpZmr6YZ33unvsHZGIXgyl+KUEYTV5YvyDY+aUdVH/kZkKTrP0cTOgo+jpVDVFbS6r19fSiE9zfFwU+e1Hn5bsI5FH1JqTj6Oi4SWbfMmcC8FAx4BPEpKI1w0H+wz5R+4K1wQecLk2S34ztMX26TUw37bnNZEjV0u5BQqMp/xnaoXIjK+p1+pv2bUiiNgu/7pKOiZa9YsojqQ66m4raB5tULHpmWZFkdLC1/3MY+eG6dlfx7u5elShH7P11y6M9qwWtEVdj0KgoPAlRvCYKaIAppCuDnOnIeR6O/Gb0Vjbf4i1HLjB/7ZBFh1N5WdHDCD8m7UjpZ1/yFbsXS5QBz2rVhjjTQUEGdwc8D5FYEteeWN6vjONU9Fo/9uNElFspK2GVVvKlxK90PPC3h6suvHLOPkDrWtqxpTW8iRswFv9BJ1TrYK2JP6m1KuvqaVmdQz25QajMQjwHYr31mjqt+G6m91cRTgJC87t4pzgPwn4ALAK6aLOp8k2GEotxrl1T4rQtxY="
 
-    fromAddres: "bertolino@bertolinocastro.github.io"
+    fromAddress: "noreply@bertolinocastro.github.io"
 
   # (*) REQUIRED
   #
