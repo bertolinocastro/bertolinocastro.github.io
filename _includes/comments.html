@@ -20,6 +20,7 @@
           {% if site.data.comments[page.slug] %}
             <h4 class="page__comments-title">{{ site.data.ui-text[site.locale].comments_title | default: "Comments" }}</h4>
             {% assign allcomments = site.data.comments[page.slug] | sort %}
+            {{ allcomments | jsonify }}
 
             {% assign comments = allcomments | where_exp: "item", "item.replying_to == ''" %}
 
@@ -33,6 +34,20 @@
               {% assign date = comment[1].date %}
               {% assign message = comment[1].message %}
               {% include comment.html index=forloop.index commentid=commentid mention=mention replyname=replyname email=email name=name url=url date=date message=message %}
+
+
+              {% assign replies = allcomments | where_exp: "item", "item.replying_to == commentid" %}
+              {% for comment in replies %}
+                {% assign commentid = comment[1]._id %}
+                {% assign replyid = comment[1].replying_to %}
+                {% assign mention = comment[1].mention %}
+                {% assign email = comment[1].email %}
+                {% assign name = comment[1].name %}
+                {% assign url = comment[1].url %}
+                {% assign date = comment[1].date %}
+                {% assign message = comment[1].message %}
+                {% include comment.html index=forloop.index commentid=commentid replyid=replyid mention=mention email=email name=name url=url date=date message=message %}
+              {% endfor %}
 
             {% endfor %}
           {% endif %}
@@ -70,11 +85,13 @@
           </fieldset>
           <fieldset class="hidden">
             <input type="hidden" name="options[slug]" value="{{ page.slug }}">
-            <input type="hidden" name="fields[hidden]"/>
+            <!-- <input type="hidden" name="fields[hidden]"/> -->
             {% comment %} Lines below added in order to recaptcha to work  {% endcomment %}
             <input type="hidden" name="options[reCaptcha][siteKey]" value="{{ site.reCaptcha.siteKey }}">
             <input type="hidden" name="options[reCaptcha][secret]"  value="{{ site.reCaptcha.secret }}">
             <input type="hidden" name="options[subscribe]" value="email">
+            <input type="hidden" id="comment-replying-to" name="fields[replying_to]" value="">
+            <input type="hidden" id="comment-mention" name="fields[mention]" value="">
           </fieldset>
           <!-- Start comment form alert messaging -->
           <p class="hidden js-notice">
