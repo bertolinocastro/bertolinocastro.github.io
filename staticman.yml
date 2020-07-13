@@ -49,19 +49,21 @@ comments:
   # Notification settings. When enabled, users can choose to receive notifications
   # via email when someone adds a reply or a new comment. This requires an account
   # with Mailgun, which you can get for free at http://mailgun.com.
-  #notifications:
+  notifications:
     # Enable notifications
-    #enabled: true
+    enabled: true
 
     # (!) ENCRYPTED
     #
     # Mailgun API key
-    #apiKey: "1q2w3e4r"
+    apiKey: "Hu7ZL2W/IjmDpzMfXTMTBa2hM1AMeJefqsX0md25eZbvjXsEBDPEJI6ixGN/BXEG8I1r2LNdHCDwHUsFXoraDPR9jy9Y6QiNhr1ki5u58Ao5tRhY88h8Az2ybc5e7LuO4M2c7cGyUX1DEbFCS27/pah/wmxRGpfdGYtQ+E+76Dzpsv/xqz0CCfK/sFHM2XJyMZRhemA7coAtw3fBZK8TPgKWdv42sxGJ5sdUHARYc5p2dXUzFZmzqaGDIl8f7B4inzyr57I9oUAgb5zaBDrcFxR1UYx5Qfx7H+cYl0TtFWl9H/n++Wd3UicgMOiRudez47ACJg7z4gCO0ZlRrxAyHcSL7V6PzLx1WhOxYaONvayKHA0qOZuwFCkbbBrApmXVc4D7aGCOIRUsTyhvmXUCRuK7Kqv6UaTBxQALT9G7JBO2v8JZ+dUwn/bGFhkPP5BJutC6pM0/CdJ7CPhdQGkZykGH+ka81dtojYmLjMjOKcp6e+3K13ThOC6C0OR0sNL5HnHRWZytSzRyEh0cTLkQeFJbwALzWtXL6iqAGsR2+ne6Ph7xwqg08A4HV/8AD8Md/6h61DFyee9GeojGT2cwc2XONi8t4d3hCUD4duFClAwOHMgV9rOrzkaZ6NTkfOHKyfUe3Y5W56B2cr6CdqRN0Jjn8nS/p7IEx+mWTZn4Lf0="
 
     # (!) ENCRYPTED
     #
     # Mailgun domain (encrypted)
-    #domain: "4r3e2w1q"
+    domain: "feWRveyO6qyAZ/Oe8BU7VMB7LtYlAd/05yjh7uX4y+NHBZTPQFpihWExpuCISfFbrvOoZT/PbvP1G3q/Wk31m6JG8nMSw0oZmYA1wBzq0NrUQDBz0HA3uIQnhUP0VQyPwQu0R2vdZHyNAZBOxSINaeh+muGomQiBEVWW15MpZmr6YZ33unvsHZGIXgyl+KUEYTV5YvyDY+aUdVH/kZkKTrP0cTOgo+jpVDVFbS6r19fSiE9zfFwU+e1Hn5bsI5FH1JqTj6Oi4SWbfMmcC8FAx4BPEpKI1w0H+wz5R+4K1wQecLk2S34ztMX26TUw37bnNZEjV0u5BQqMp/xnaoXIjK+p1+pv2bUiiNgu/7pKOiZa9YsojqQ66m4raB5tULHpmWZFkdLC1/3MY+eG6dlfx7u5elShH7P11y6M9qwWtEVdj0KgoPAlRvCYKaIAppCuDnOnIeR6O/Gb0Vjbf4i1HLjB/7ZBFh1N5WdHDCD8m7UjpZ1/yFbsXS5QBz2rVhjjTQUEGdwc8D5FYEteeWN6vjONU9Fo/9uNElFspK2GVVvKlxK90PPC3h6suvHLOPkDrWtqxpTW8iRswFv9BJ1TrYK2JP6m1KuvqaVmdQz25QajMQjwHYr31mjqt+G6m91cRTgJC87t4pzgPwn4ALAK6aLOp8k2GEotxrl1T4rQtxY="
+
+    fromAddres: "bertolino@bertolinocastro.github.io"
 
   # (*) REQUIRED
   #
