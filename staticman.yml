@@ -53,7 +53,7 @@ comments:
     # Enable notifications
     enabled: true
 
-    fromAddress: "noreply@bertolinocastro.github.io"
+    # fromAddress: "noreply@bertolinocastro.github.io"
 
     # (!) ENCRYPTED
     #
