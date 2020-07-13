@@ -34,7 +34,7 @@ atom_feed:
   path                   : # blank (default) uses feed.xml
 staticman:
   # allowedFields          : ['name', 'email', 'url', 'message', 'replying_to_uid']
-  allowedFields          : ['name', 'email', 'message', 'replying_to_uid']
+  allowedFields          : ['name', 'email', 'message', 'replying_to_uid', 'mention']
   branch                 : "master" # "master", "gh-pages"
   commitMessage          : "Comment from {fields.name} on {options.slug}"
   filename               : comment-{@timestamp}-{@id}
