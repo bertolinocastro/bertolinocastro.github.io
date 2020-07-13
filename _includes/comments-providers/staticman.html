@@ -38,6 +38,27 @@
       $('.page__comments-form .js-notice-text').html(message);
     }
   })(jQuery);
+
+
+  {% comment %} Scripts below were added by me {% endcomment %}
+  function replyTo(replyId, commentId, name){
+    (function($){
+      $('#comment-replying-to').val(replyId)
+      $('#comment-mention').val(commentId)
+      $('#comment-form-replytext').text(name)
+      $('#comment-form-replylabel').removeClass("hidden")
+      $('.page__comments-title')[1].scrollIntoView()
+    })(jQuery);
+  }
+
+  function cancelReply(){
+    (function($){
+      $('#comment-form-replylabel').addClass("hidden")
+      $('#comment-replying-to').val(null)
+      $('#comment-mention').val(null)
+      $('#comment-form-replytext').text(null)
+    })(jQuery);
+  }
   </script>
 
   {% comment %} I added this line bellow in order to staticman work with web tutorials I found {% endcomment %}
