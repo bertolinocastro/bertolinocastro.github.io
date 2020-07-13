@@ -5,24 +5,24 @@
   font-style: italic;
   font-size: 12px;
   color: #494E52;
-}
 
-.comment__mention span {
-  font-weight: bold
+  span {
+    font-weight: bold
+  }
 }
 
 #comment-form-replylabel {
   font-style: italic;
   font-size: 14px;
-}
 
-#comment-form-replylabel a {
-  font-style: normal;
-}
+  a {
+    font-style: normal;
+  }
 
-#comment-form-replylabel a:hover {
-  text-decoration: underline;
-  cursor: pointer;
+  a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
 }
 
 #comment-form-replytext {
@@ -31,13 +31,13 @@
 
 .comment__replybutton {
   font-size: 12px;
+
+  span {
+    font-weight: bold;
+  }
 }
 
 .comment__replybutton:hover {
   text-decoration: underline;
   cursor: pointer;
-}
-
-.comment__replybutton span {
-  font-weight: bold;
 }
