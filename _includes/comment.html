@@ -1,6 +1,10 @@
 <article id="comment{{ include.commentid }}" class="js-comment comment {% if include.replyid != '' %}comment-child{% endif %} {% if include.isadmin %}comment-admin{% endif %}">
   <div class="comment__avatar-wrapper">
-    <img class="comment__avatar" src="https://www.gravatar.com/avatar/{{ include.email }}?d=mm&s=80">
+    <img class="comment__avatar"
+    {% unless include.isadmin %}
+    src="https://www.gravatar.com/avatar/{{ include.email }}?d=mm&s=80"
+    {% else %}src="{{ site.author.gravatar | prepend: '/images/' | prepend: base_path }}"{% endunless %}
+    >
   </div>
   <div class="comment__content-wrapper">
     <h3 class="comment__author">
