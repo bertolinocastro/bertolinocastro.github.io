@@ -7,8 +7,10 @@
 }
 
 .comment-admin {
-  .comment__author {
-    text-decoration: none;
+  .comment__author > span {
+    // color: white;
+    background-color: $lighter-gray;
+    padding: 0 2px 0 5px;
   }
 }
 

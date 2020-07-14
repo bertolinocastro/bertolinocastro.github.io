@@ -4,7 +4,7 @@
   </div>
   <div class="comment__content-wrapper">
     <h3 class="comment__author">
-      {{ include.name }}
+      <span {% if include.isadmin %}title="Admin's comment"{% endif %}>{{ include.name }}</span>
       {% unless include.mention == '' %}
         {% assign mentioned = site.data.comments[page.slug] | where_exp: "item", "item._id == include.mention" %}
         <a class="comment__mention" href="#comment{{ include.mention }}" >in reply to <span>{{ mentioned[0].name }}</span></a>
