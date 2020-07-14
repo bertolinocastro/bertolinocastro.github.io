@@ -1,16 +1,24 @@
 
 /* editar o reply to e o replying aqui... */
 
-.comment-admin {
+.comment {
+  padding: .5em 0 .5em 10px;
+  margin: 0;
+}
 
+.comment-admin {
   .comment__author {
     text-decoration: none;
   }
 }
 
 .comment-child {
-  padding-left: 5px;
-  border-left: 25px #BDC1C4 solid;
+  border-left: 10px #f2f3f3 solid;
+
+  @include breakpoint($large) {
+    padding-left: 5px;
+    border-left: 25px #f2f3f3 solid;
+  }
 }
 
 .comment__mention {
