@@ -1,6 +1,18 @@
 
 /* editar o reply to e o replying aqui... */
 
+.comment-admin {
+
+  .comment__author {
+    text-decoration: none;
+  }
+}
+
+.comment-child {
+  padding-left: 5px;
+  border-left: 25px #BDC1C4 solid;
+}
+
 .comment__mention {
   font-style: italic;
   font-size: 12px;
@@ -9,6 +21,19 @@
   span {
     font-weight: bold
   }
+}
+
+.comment__replybutton {
+  font-size: 12px;
+
+  span {
+    font-weight: bold;
+  }
+}
+
+.comment__replybutton:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 #comment-form-replylabel {
@@ -27,17 +52,4 @@
 
 #comment-form-replytext {
   font-weight: bold;
-}
-
-.comment__replybutton {
-  font-size: 12px;
-
-  span {
-    font-weight: bold;
-  }
-}
-
-.comment__replybutton:hover {
-  text-decoration: underline;
-  cursor: pointer;
 }

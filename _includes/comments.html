@@ -20,7 +20,6 @@
           {% if site.data.comments[page.slug] %}
             <h4 class="page__comments-title">{{ site.data.ui-text[site.locale].comments_title | default: "Comments" }}</h4>
             {% assign allcomments = site.data.comments[page.slug] | sort %}
-            {{ allcomments | jsonify }}
 
             {% assign comments = allcomments | where_exp: "item", "item[1].replying_to == ''" %}
 
@@ -30,25 +29,25 @@
               {% assign mention = comment[1].mention %}
               {% assign email = comment[1].email %}
               {% assign name = comment[1].name %}
-              {% assign url = comment[1].url %}
               {% assign date = comment[1].date %}
               {% assign message = comment[1].message %}
-              {% include comment.html index=forloop.index commentid=commentid mention=mention replyid=replyid email=email name=name url=url date=date message=message %}
+              {% assign isauthor = email == site.author.email and name == site.author.shortname %}
+
+              {% include comment.html index=forloop.index commentid=commentid mention=mention replyid=replyid email=email name=name date=date message=message isauthor=isauthor %}
 
 
               {% assign replies = allcomments | where_exp: "item", "item[1].replying_to == commentid" %}
-              FILHOS
-              {{ replies | jsonify }}
               {% for comment in replies %}
                 {% assign commentid = comment[1]._id %}
                 {% assign replyid = comment[1].replying_to %}
                 {% assign mention = comment[1].mention %}
                 {% assign email = comment[1].email %}
                 {% assign name = comment[1].name %}
-                {% assign url = comment[1].url %}
                 {% assign date = comment[1].date %}
                 {% assign message = comment[1].message %}
-                {% include comment.html index=forloop.index commentid=commentid replyid=replyid mention=mention email=email name=name url=url date=date message=message %}
+                {% assign isauthor = email == site.author.email and name == site.author.shortname %}
+
+                {% include comment.html index=forloop.index commentid=commentid replyid=replyid mention=mention email=email name=name date=date message=message isauthor=isauthor %}
               {% endfor %}
 
             {% endfor %}
