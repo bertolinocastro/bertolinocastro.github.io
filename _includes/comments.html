@@ -100,6 +100,9 @@
             {% comment %} Lines below added in order to recaptcha to work  {% endcomment %}
             <input type="hidden" name="options[reCaptcha][siteKey]" value="{{ site.reCaptcha.siteKey }}">
             <input type="hidden" name="options[reCaptcha][secret]"  value="{{ site.reCaptcha.secret }}">
+            <input type="hidden" name="options[origin]" value="{{ page.url | absolute_url }}">
+            <!-- <input type="hidden" name="options[parent]" value="{{ page.url | absolute_url }}"> -->
+            <input type="hidden" name="options[parent]" value="{{ page.slug }}">
             <input type="hidden" name="options[subscribe]" value="email">
             <input type="hidden" id="comment-replying-to" name="fields[replying_to]" value="">
             <input type="hidden" id="comment-mention" name="fields[mention]" value="">
