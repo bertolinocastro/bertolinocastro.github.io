@@ -21,9 +21,9 @@ future                   : true
 read_more                : "disabled" # if enabled, adds "Read more" links to excerpts
 talkmap_link             : false #change to true to add link to talkmap on talks page
 comments:
-  provider               : "staticman" # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
+  provider               : "disqus" # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
   disqus:
-    shortname            :
+    shortname            : 'bertolinocastrogithubio'
   discourse:
     server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
   facebook:
@@ -32,25 +32,25 @@ comments:
     colorscheme          : # "light" (default), "dark"
 atom_feed:
   path                   : # blank (default) uses feed.xml
-staticman:
-  # allowedFields          : ['name', 'email', 'url', 'message', 'replying_to_uid']
-  allowedFields          : ['name', 'email', 'message', 'replying_to', 'mention']
-  branch                 : "master" # "master", "gh-pages"
-  commitMessage          : "Comment from {fields.name} on {options.slug}"
-  filename               : comment-{@timestamp}-{@id}
-  format                 : "yaml"
-  # moderation             : true
-  moderation             : false
-  path                   : "_data/comments/{options.slug}"
-  requiredFields         : ['name', 'email', 'message']
-  transforms:
-    email                : "md5"
-  generatedFields:
-    date:
-      type               : "date"
-      options:
-        format           : "iso8601" # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
-staticman_url            : https://staticman-bertolinocastro-bot.herokuapp.com/v2/entry/bertolinocastro/bertolinocastro.github.io/master/comments
+# staticman:
+#   # allowedFields          : ['name', 'email', 'url', 'message', 'replying_to_uid']
+#   allowedFields          : ['name', 'email', 'message', 'replying_to', 'mention']
+#   branch                 : "master" # "master", "gh-pages"
+#   commitMessage          : "Comment from {fields.name} on {options.slug}"
+#   filename               : comment-{@timestamp}-{@id}
+#   format                 : "yaml"
+#   # moderation             : true
+#   moderation             : false
+#   path                   : "_data/comments/{options.slug}"
+#   requiredFields         : ['name', 'email', 'message']
+#   transforms:
+#     email                : "md5"
+#   generatedFields:
+#     date:
+#       type               : "date"
+#       options:
+#         format           : "iso8601" # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
+# staticman_url            : https://staticman-bertolinocastro-bot.herokuapp.com/v2/entry/bertolinocastro/bertolinocastro.github.io/master/comments
 reCaptcha: # reCaptcha used along to prevent spam in cmoment features with the staticman heroku app
   siteKey                : 6Lc6obAZAAAAAEkW4S3moi8d59wKzL_wj9OvOuA0
   secret                 : nmH3CtOvCbgdvGs80Kp61mPGKOsdNECwOLlGcJIS7wI4VHChj+SlBtPLytu+yz0c8pq7dPlr1BjTITQ64LEhPAc3doFUk+gDEMK0ZD1tMjGyNc5Xbu6BUs5JdnE348WZlZQo6v7G1dMEjGk/bDlCFlXFVHD9hRvdgTr60mtQaw9dUihY9NZwTQAZPev/YCOL5hpuo8VWtUolASXy6rdeZCYPeJyr/wN6SPyaIz4/yI3VJ781maPrJwOFVaKU2CQubbAJaGKWwMBpsXCF4qMP251rvhLfBC6zp+Dszqf78mgQB7c0ftboD1ReNs0KKoE4Bh45LhRt7NlzS/GctkR30mgL3WkUbQuQsT/7xdcV9QH2//buQ5YtyhschwApdRRe94c7NXg++GXpT9iEUt31qrXDKaCaERjw2SUOnrKQ0T0fRgfdQo0VtTe7Q36f2BdbhQdURWxfM1irNWO+fVE/6VnChatH46sCi5yptDKYlzV6A6r+G3eDUteFRrG1Huw2MV5q1UdqVAmcGfJA/nGgivxM3rzZYa1h31tXCNoxAIzlXiJnNwxF7W60ffh8ABneGvFEPhMawmPg06BkX/eiRf6fhq3uKUAlFC2vwN+OTEVrYU4bM23IZ5iIO4nrS6tniuJzEAA9bVwJuWSFwmbJG6r4guGBNrn9nl+PqyehQXY=
