@@ -55,6 +55,7 @@
 
 /*  Custom code  */
 
+/* styles for search input field */
 .masthead__search {
     display: table;
     margin: 0 1rem;
@@ -117,4 +118,10 @@
       z-index: 0;
     }
   }
+}
+
+
+/* styles for result listings */
+.masthead__results {
+  
 }
