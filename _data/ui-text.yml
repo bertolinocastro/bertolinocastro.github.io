@@ -17,6 +17,7 @@ en: &DEFAULT_EN
   tags_label                 : "Tags:"
   categories_label           : "Categories:"
   date_label                 : "Published:"
+  date_modified_label        : "Updated:"
   comments_label             : "Leave a Comment"
   comments_title             : "Comments"
   more_label                 : "Learn More"
@@ -64,7 +65,8 @@ es: &DEFAULT_ES
   meta_label                 :
   tags_label                 : "Etiquetas:"
   categories_label           : "Categorías:"
-  date_label                 : "Actualizado:"
+  date_label                 : "Publicado:"
+  date_modified_label        : "Actualizado:"
   comments_label             : "Comentar"
   comments_title             :
   more_label                 : "Ver más"
@@ -108,7 +110,8 @@ fr: &DEFAULT_FR
   meta_label                 :
   tags_label                 : "Tags :"
   categories_label           : "Catégories :"
-  date_label                 : "Mis à jour :"
+  date_label                 : "Publié :"
+  date_modified_label        : "Mis à jour :"
   comments_label             : "Laisser un commentaire"
   comments_title             :
   more_label                 : "Lire plus"
@@ -154,7 +157,8 @@ tr: &DEFAULT_TR
   meta_label                 :
   tags_label                 : "Etiketler:"
   categories_label           : "Kategoriler:"
-  date_label                 : "Güncelleme tarihi:"
+  date_label                 : "Yayınlanma tarihi:"
+  date_modified_label        : "Güncelleme tarihi:"
   comments_label             : "Yorum yapın"
   comments_title             :
   more_label                 : "Daha fazlasını öğrenin"
@@ -196,7 +200,8 @@ pt: &DEFAULT_PT
   meta_label                 :
   tags_label                 : "Tags:"
   categories_label           : "Categorias:"
-  date_label                 : "Atualizado em:"
+  date_label                 : "Publicado em:"
+  date_modified_label        : "Atualizado em:"
   comments_label             : "Deixe um comentário"
   comments_title             :
   more_label                 : "Aprenda Mais"
@@ -240,7 +245,8 @@ it: &DEFAULT_IT
   meta_label                 :
   tags_label                 : "Tags:"
   categories_label           : "Categorie:"
-  date_label                 : "Aggiornato:"
+  date_label                 : "Pubblicato:"
+  date_modified_label        : "Aggiornato:"
   comments_label             : "Scrivi un commento"
   comments_title             :
   more_label                 : "Scopri di più"
