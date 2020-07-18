@@ -120,6 +120,13 @@
   }
 }
 
+.masthead__search-notransition {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important;
+}
+
 /*
  *  Search results related
  */
