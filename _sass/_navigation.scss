@@ -258,7 +258,8 @@
     border: 1px solid $border-color;
     border-radius: $border-radius;
     background: #fff;
-    box-shadow: 0 0 10px rgba(#000, 0.25);
+    /* box-shadow: 0 0 10px rgba(#000, 0.25); // I changed it to fit the google cse results box style  */
+    box-shadow: 0 -4px 6px rgba(#000, 0.25);
 
     a {
       margin: 0;

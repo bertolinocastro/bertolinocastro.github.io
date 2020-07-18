@@ -120,8 +120,25 @@
   }
 }
 
+/*
+ *  Search results related
+ */
 
-/* styles for result listings */
-.masthead__results {
-  
+/* Container to implement non-default Overlay on google's results */
+.masterhead__gcse-searchresults-container {
+  display: none;
+  position: absolute;
+  width: 100%;
+  box-shadow: 0 10px 10px -8px black;
+  background-color: $background-color;
+
+  @include breakpoint($large) {
+    --pad: calc( (100% - #{$large}) / 2 );
+    padding-left: var(--pad);
+    padding-right: var(--pad);
+  }
 }
+
+// .hidden-links .masterhead__gcse-searchresults-container {
+//
+// }

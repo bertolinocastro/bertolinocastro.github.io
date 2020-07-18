@@ -1,0 +1,73 @@
+<script type="text/javascript">
+  var mycallback = () => {
+    var input = document.getElementById('masthead__search-input');
+    var element = google.search.cse.element.getElement('google-searchresult-div');
+    var elementDiv = document.getElementsByClassName('masterhead__gcse-searchresults-container')[0];
+
+    input.onkeydown = function (e) {
+      if (e.key === "Enter"){
+        if (input.value == '') {
+          hideResults();
+          element.clearAllResults();
+        } else {
+          element.execute(input.value);
+          showResults();
+        }
+      }
+    };
+
+    var clickListener = function(e) {
+      var $target = $(e.target);
+      if(!($target.closest(elementDiv).length || $target.closest(input).length) && $(elementDiv).is(":visible")) {
+        hideResults();
+        element.clearAllResults();
+      }
+    };
+
+    var keydownListener = (e) => {
+      if (e.key == "Escape") {
+        hideResults();
+        element.clearAllResults();
+      }
+    };
+
+    function addClickAndKeydownListener () {
+      removeClickAndKeydownListener();
+      document.addEventListener('click', clickListener);
+      document.addEventListener('keydown', keydownListener);
+    };
+
+    function removeClickAndKeydownListener () {
+      document.removeEventListener('click', clickListener);
+      document.removeEventListener('keydown', keydownListener);
+    };
+
+    function hideResults (){
+      elementDiv.style.display = 'none';
+      removeClickAndKeydownListener();
+    }
+
+    function showResults(){
+      elementDiv.style.display = 'block';
+      setPaddingTop();
+      addClickAndKeydownListener();
+    }
+
+    /* adding some css trick for results box not be behind by dropdown menu in small screens */
+    var hiddenClass = document.getElementsByClassName('hidden-links')[0];
+    function setPaddingTop () {
+      if (hiddenClass.children.length){
+        var offsetY0 =  window.scrollY + elementDiv.getBoundingClientRect().top;
+        var offsetY =  window.scrollY + input.getBoundingClientRect().bottom;
+        elementDiv.style.paddingTop = (offsetY-offsetY0)+'px';
+      } else {
+        elementDiv.style.paddingTop = '0';
+      }
+    };
+    window.addEventListener('resize', setPaddingTop);
+  };
+
+  window.__gcse = { /* loading after google cse object have read the "element" */
+    initializationCallback: mycallback,
+  };
+</script>
