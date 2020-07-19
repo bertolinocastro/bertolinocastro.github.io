@@ -15,27 +15,27 @@
   </div>
 
   <div class="author__content">
-    <h3 class="author__name">{{ author.name }}</h3>
-    {% if author.bio %}<p class="author__bio">{{ author.bio }}</p>{% endif %}
+    <h3 class="author__name">{{ author.shortname }}</h3>
+    {% if author.bio %}<p class="author__bio">{{ author.bio[site.active_lang] | default: author.bio[site.default_lang] }}</p>{% endif %}
   </div>
 
   <div class="author__urls-wrapper">
-    <button class="btn btn--inverse">Follow</button>
+    <button class="btn btn--inverse">{{ site.data.ui-text.bio_follow_label }}</button>
     <ul class="author__urls social-icons">
       {% if author.location %}
-        <li><i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> {{ author.location }}</li>
+        <li><i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> {{ author.location[site.active_lang] | default: author.location[site.default_lang] }}</li>
       {% endif %}
       {% if author.employer %}
-        <li><i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> {{ author.employer }}</li>
+        <li><i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> {{ author.employer[site.active_lang] | default: author.employer[site.default_lang] }}</li>
       {% endif %}
       {% if author.uri %}
-        <li><a target="_blank" rel="noopener noreferrer" href="{{ author.uri }}"><i class="fas fa-fw fa-link" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].website_label | default: "Website" }}</a></li>
+        <li><a target="_blank" rel="noopener noreferrer" href="{{ author.uri }}"><i class="fas fa-fw fa-link" aria-hidden="true"></i> {{ site.data.ui-text.website_label }}</a></li>
       {% endif %}
       {% if author.email %}
-        <li><a target="_blank" rel="noopener noreferrer" href="mailto:{{ author.email }}"><i class="fas fa-fw fa-envelope" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].email_label | default: "Email" }}</a></li>
+        <li><a target="_blank" rel="noopener noreferrer" href="mailto:{{ author.email }}"><i class="fas fa-fw fa-envelope" aria-hidden="true"></i> {{ site.data.ui-text.email_label }}</a></li>
       {% endif %}
       {% if author.lattes %}
-      <li><a target="_blank" rel="noopener noreferrer" href="{{ author.lattes }}"><i class="ai ai-lattes ai-fw"></i> Lattes Curriculum</a></li>
+      <li><a target="_blank" rel="noopener noreferrer" href="{{ author.lattes }}"><i class="ai ai-lattes ai-fw"></i> {{ site.data.ui-text.lattes_cv_label }}</a></li>
       {% endif %}
       {% if author.keybase %}
         <li><a target="_blank" rel="noopener noreferrer" href="https://keybase.io/{{ author.keybase }}"><i class="fas fa-fw fa-key" aria-hidden="true"></i> Keybase</a></li>

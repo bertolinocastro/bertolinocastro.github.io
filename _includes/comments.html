@@ -1,7 +1,7 @@
 {% include base_path %}
 
 <div class="page__comments">
-  {% capture comments_label %}{{ site.data.ui-text[site.locale].comments_label | default: "Comments" }}{% endcapture %}
+  {% capture comments_label %}{{ site.data.ui-text.comments_label }}{% endcapture %}
   {% case site.comments.provider %}
   {% when "disqus" %}
     <h4 class="page__comments-title">{{ comments_label }}</h4>
@@ -18,7 +18,7 @@
         <!-- Start static comments -->
         <div class="js-comments">
           {% if site.data.comments[page.slug] %}
-            <h4 class="page__comments-title">{{ site.data.ui-text[site.locale].comments_title | default: "Comments" }}</h4>
+            <h4 class="page__comments-title">{{ site.data.ui-text.comments_title }}</h4>
             {% assign allcomments = site.data.comments[page.slug] | sort %}
 
             {% assign comments = allcomments | where_exp: "item", "item[1].replying_to == ''" %}
@@ -62,12 +62,12 @@
         <!-- End static comments -->
 
         <!-- Start new comment form -->
-        <h4 class="page__comments-title">{{ site.data.ui-text[site.locale].comments_label | default: "Leave a Comment" }}</h4>
-        <p class="small">{{ site.data.ui-text[site.locale].comment_form_info | default: "Your email address will not be published. Required fields are marked" }} <span class="required">*</span></p>
+        <h4 class="page__comments-title">{{ site.data.ui-text.comments_label }}</h4>
+        <p class="small">{{ site.data.ui-text.comment_form_info }} <span class="required">*</span></p>
         <form id="new_comment" class="page__comments-form js-form form" method="post" action="{{ site.staticman_url }}">
           <div class="form__spinner">
             <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
-            <span class="sr-only">{{ site.data.ui-text[site.locale].loading_label | default: "Loading..." }}</span>
+            <span class="sr-only">{{ site.data.ui-text.loading_label }}</span>
           </div>
 
           <fieldset id="comment-form-replylabel" class="hidden">
@@ -75,33 +75,35 @@
             <a onclick="cancelReply()">(cancel reply)</a>
           </fieldset>
           <fieldset>
-            <label for="comment-form-message">{{ site.data.ui-text[site.locale].comment_form_comment_label | default: "Comment" }} <small class="required">*</small></label>
+            <label for="comment-form-message">{{ site.data.ui-text.comment_form_comment_label }} <small class="required">*</small></label>
             <textarea type="text" rows="3" id="comment-form-message" name="fields[message]" tabindex="1"></textarea>
-            <div class="small help-block"><a href="https://daringfireball.net/projects/markdown/">{{ site.data.ui-text[site.locale].comment_form_md_info | default: "Markdown is supported." }}</a></div>
+            <div class="small help-block"><a href="https://daringfireball.net/projects/markdown/">{{ site.data.ui-text.comment_form_md_info }}</a></div>
           </fieldset>
           <fieldset>
-            <label for="comment-form-name">{{ site.data.ui-text[site.locale].comment_form_name_label | default: "Name" }} <small class="required">*</small></label>
+            <label for="comment-form-name">{{ site.data.ui-text.comment_form_name_label }} <small class="required">*</small></label>
             <input type="text" id="comment-form-name" name="fields[name]" tabindex="2" />
           </fieldset>
           <fieldset>
-            <label for="comment-form-email">{{ site.data.ui-text[site.locale].comment_form_email_label | default: "Email address" }} <small class="required">*</small></label>
+            <label for="comment-form-email">{{ site.data.ui-text.comment_form_email_label }} <small class="required">*</small></label>
             <input type="email" id="comment-form-email" name="fields[email]" tabindex="3" />
           </fieldset>
+          {% comment %}
           <!-- <fieldset>
-            <label for="comment-form-url">{{ site.data.ui-text[site.locale].comment_form_website_label | default: "Website (optional)" }}</label>
+            <label for="comment-form-url">{{ site.data.ui-text.comment_form_website_label }}</label>
             <input type="url" id="comment-form-url" name="fields[url]" tabindex="4"/>
           </fieldset> -->
+          {% endcomment %}
           <fieldset>
             <div id="reCaptcha" class="g-recaptcha" data-sitekey="{{ site.reCaptcha.siteKey }}"></div>
           </fieldset>
           <fieldset class="hidden">
             <input type="hidden" name="options[slug]" value="{{ page.slug }}">
-            <!-- <input type="hidden" name="fields[hidden]"/> -->
+            {% comment %}<!-- <input type="hidden" name="fields[hidden]"/> -->{% endcomment %}
             {% comment %} Lines below added in order to recaptcha to work  {% endcomment %}
             <input type="hidden" name="options[reCaptcha][siteKey]" value="{{ site.reCaptcha.siteKey }}">
             <input type="hidden" name="options[reCaptcha][secret]"  value="{{ site.reCaptcha.secret }}">
             <input type="hidden" name="options[origin]" value="{{ page.url | absolute_url }}">
-            <!-- <input type="hidden" name="options[parent]" value="{{ page.url | absolute_url }}"> -->
+            {% comment %}<!-- <input type="hidden" name="options[parent]" value="{{ page.url | absolute_url }}"> -->{% endcomment %}
             <input type="hidden" name="options[parent]" value="{{ page.slug }}">
             <input type="hidden" name="options[subscribe]" value="email">
             <input type="hidden" id="comment-replying-to" name="fields[replying_to]" value="">
@@ -113,7 +115,7 @@
           </p>
           <!-- End comment form alert messaging -->
           <fieldset>
-            <button type="submit" id="comment-form-submit" tabindex="5" class="btn btn--large">{{ site.data.ui-text[site.locale].comment_btn_submit | default: "Submit Comment" }}</button>
+            <button type="submit" id="comment-form-submit" tabindex="5" class="btn btn--large">{{ site.data.ui-text.comment_btn_submit }}</button>
           </fieldset>
         </form>
         <!-- End new comment form -->

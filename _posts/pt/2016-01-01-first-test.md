@@ -4,6 +4,7 @@ date: 2016-01-01
 permalink: /posts/2016/01/test/
 tags:
   - cool posts
+categories:
   - category1
   - category2
 lang: pt
@@ -21,3 +22,5 @@ Aren't headings cool?
 ------
 
 PORTUGA
+
+$x^2$
