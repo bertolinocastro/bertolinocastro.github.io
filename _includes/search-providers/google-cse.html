@@ -48,10 +48,15 @@
     }
 
     function showResults(){
-      input.blur();
       elementDiv.style.display = 'block';
       setPaddingTop();
       addClickAndKeydownListener();
+      hideMobileKeyboard();
+    }
+
+    function hideMobileKeyboard(){
+      if(document.activeElement === input)
+        input.blur();
     }
 
     /* adding some css trick for results box not be behind by dropdown menu in small screens */
