@@ -209,12 +209,12 @@
   content: "\e861";
 }
 .ai-lattes {
-  background: url('../../images/lattes.svg');
+  background: url('../../images/icons/lattes.svg');
   background-size: 1.28571429em 1em;
   height: 1em;
 }
 .ai-lattes-square {
-  background: url('../../images/lattes.svg');
+  background: url('../../images/icons/lattes.svg');
   background-size: 1.28571429em 1em;
   height: 1em;
 }
