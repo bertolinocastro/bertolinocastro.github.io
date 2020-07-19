@@ -7,10 +7,13 @@
 
 # Site Settings
 # locale                   : "en-US"
-title                    : "Bertolino"
+title                    : "Bertoblog"
 title_separator          : "-"
 name                     : &name "Gabriel Bertolino"
-description              : &description "Undergrad in Physics, quantum computing scientist aspirant, developer in daily life and lover of learning new languages"
+description              : &description
+  en : "Undergrad in Physics, quantum computing scientist aspirant, developer in daily life and lover of learning new languages"
+  pt : "Estudante de física maluco"
+  de : "Dummkopf Student"
 url                      : https://bertolinocastro.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "bertolinocastro/bertolinocastro.github.io"
@@ -64,7 +67,11 @@ parallel_localization: true
 lang_from_path: true
 exclude_from_localization:
   - assets
+  - images
+  - files
+  - markdown_generator
   - other_repo_webcontent
+  - talkmap
   - .asset-cache
   - .bundle
   - .jekyll-assets-cache
@@ -84,7 +91,7 @@ exclude_from_localization:
   - vendor
 
 # SEO Related
-google_site_verification :
+google_site_verification : 'google4787a8f78512a353.html'
 bing_site_verification   :
 alexa_site_verification  :
 yandex_site_verification :
@@ -96,13 +103,20 @@ facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 :  # Open Graph/Twitter default site image
+og_image                 : 'gravatar.jpg' # Open Graph/Twitter default site image
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
-  type                   : # Person or Organization (defaults to Person)
-  name                   : # If the user or organization name differs from the site's name
+  type                   : 'Person' # Person or Organization (defaults to Person)
+  name                   : 'Gabriel Bertolino' # If the user or organization name differs from the site's name
   links: # An array of links to social media profiles
+    - 'https://www.instagram.com/bertolinodecastro/'
+    - 'https://www.instagram.com/bertolinolearnlanguages/'
+    - 'https://www.youtube.com/channel/UC-RaQ7JyH2UTBBt_JT6FpXw'
+    - 'https://orcid.org/0000-0003-4925-4311'
+    - 'https://www.stackoverflow.com/users/6844637/bertolino'
+    - 'https://github.com/bertolinocastro'
+    - 'http://lattes.cnpq.br/2951828503240063'
 
 
 # Analytics
@@ -118,8 +132,14 @@ author:
   shortname        : "Bertolino"
   avatar           : "profile.png"
   gravatar         : "gravatar.jpg"
-  bio              : "Undergrad in Physics, quantum computing scientist aspirant, developer in daily life and lover of learning new languages"
-  location         : "Brazil"
+  bio:
+    en             : "Undergrad in Physics, quantum computing scientist aspirant, developer in daily life and lover of learning new languages"
+    pt             : "Bio em pt"
+    de             : "Biographie auf Deutsch"
+  location:
+    en             : "Brazil"
+    pt             : "Brasil"
+    de             : "Brasilien"
   employer         :
   pubmed           :
   googlescholar    :

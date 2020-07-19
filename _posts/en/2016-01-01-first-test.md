@@ -1,11 +1,15 @@
 ---
 title: 'Test 1'
 date: 2016-01-01
+date_modified:
 permalink: /posts/2016/01/test/
 tags:
   - cool posts
   - category1
   - category2
+header:
+  image:
+  overlay_image:
 lang: en
 ---
 
