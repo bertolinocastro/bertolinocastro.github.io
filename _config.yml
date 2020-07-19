@@ -6,7 +6,7 @@
 # `jekyll serve`. If you change this file, please restart the server process.
 
 # Site Settings
-locale                   : "en-US"
+# locale                   : "en-US"
 title                    : "Bertolino"
 title_separator          : "-"
 name                     : &name "Gabriel Bertolino"
@@ -56,6 +56,32 @@ reCaptcha: # reCaptcha used along to prevent spam in cmoment features with the s
   siteKey                : 6Lc6obAZAAAAAEkW4S3moi8d59wKzL_wj9OvOuA0
   secret                 : nmH3CtOvCbgdvGs80Kp61mPGKOsdNECwOLlGcJIS7wI4VHChj+SlBtPLytu+yz0c8pq7dPlr1BjTITQ64LEhPAc3doFUk+gDEMK0ZD1tMjGyNc5Xbu6BUs5JdnE348WZlZQo6v7G1dMEjGk/bDlCFlXFVHD9hRvdgTr60mtQaw9dUihY9NZwTQAZPev/YCOL5hpuo8VWtUolASXy6rdeZCYPeJyr/wN6SPyaIz4/yI3VJ781maPrJwOFVaKU2CQubbAJaGKWwMBpsXCF4qMP251rvhLfBC6zp+Dszqf78mgQB7c0ftboD1ReNs0KKoE4Bh45LhRt7NlzS/GctkR30mgL3WkUbQuQsT/7xdcV9QH2//buQ5YtyhschwApdRRe94c7NXg++GXpT9iEUt31qrXDKaCaERjw2SUOnrKQ0T0fRgfdQo0VtTe7Q36f2BdbhQdURWxfM1irNWO+fVE/6VnChatH46sCi5yptDKYlzV6A6r+G3eDUteFRrG1Huw2MV5q1UdqVAmcGfJA/nGgivxM3rzZYa1h31tXCNoxAIzlXiJnNwxF7W60ffh8ABneGvFEPhMawmPg06BkX/eiRf6fhq3uKUAlFC2vwN+OTEVrYU4bM23IZ5iIO4nrS6tniuJzEAA9bVwJuWSFwmbJG6r4guGBNrn9nl+PqyehQXY=
 
+
+# Polyglot related
+languages: ['en','pt','de']
+default_lang: 'en'
+parallel_localization: true
+lang_from_path: true
+exclude_from_localization:
+  - assets
+  - other_repo_webcontent
+  - .asset-cache
+  - .bundle
+  - .jekyll-assets-cache
+  - .sass-cache
+  - CHANGELOG
+  - Capfile
+  - Gemfile
+  - Gruntfile.js
+  - LICENSE
+  - README
+  - config
+  - gulpfile.js
+  - log
+  - node_modules
+  - package.json
+  - tmp
+  - vendor
 
 # SEO Related
 google_site_verification :
@@ -135,8 +161,6 @@ include:
   - _pages
   - files
 exclude:
-  - "*.sublime-project"
-  - "*.sublime-workspace"
   - .asset-cache
   - .bundle
   - .jekyll-assets-cache
@@ -187,18 +211,18 @@ kramdown:
 
 # Collections
 collections:
-  teaching:
-    output: true
-    permalink: /:collection/:path/
+  # teaching:
+  #   output: true
+  #   permalink: /:collection/:path/
   publications:
     output: true
     permalink: /:collection/:path/
-  portfolio:
-    output: true
-    permalink: /:collection/:path/
-  talks:
-    output: true
-    permalink: /:collection/:path/
+  # portfolio:
+  #   output: true
+  #   permalink: /:collection/:path/
+  # talks:
+  #   output: true
+  #   permalink: /:collection/:path/
 
 
 # Defaults
@@ -272,6 +296,7 @@ timezone: America/Bahia # http://en.wikipedia.org/wiki/List_of_tz_database_time_
 
 # Plugins
 plugins:
+  - jekyll-polyglot
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
@@ -321,3 +346,5 @@ compress_html:
   clippings: all
   ignore:
     envs: development
+
+github: [metadata]

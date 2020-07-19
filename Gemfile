@@ -24,5 +24,6 @@ group :jekyll_plugins do
   gem "jekyll-feed"
   gem 'jekyll-sitemap'
   gem 'hawkins'
+  gem 'jekyll-polyglot'
   # gem 'jekyll-admin' # CMS-like feature to edit files
 end
