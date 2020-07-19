@@ -21,7 +21,7 @@ teaser                   : # filename of teaser fallback teaser image placed in 
 breadcrumbs              : true # true, false (default)
 words_per_minute         : 160
 future                   : true
-read_more                : "disabled" # if enabled, adds "Read more" links to excerpts
+read_more                : "enabled" # if enabled, adds "Read more" links to excerpts
 talkmap_link             : false #change to true to add link to talkmap on talks page
 comments:
   provider               : "disqus" # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
@@ -89,6 +89,7 @@ exclude_from_localization:
   - package.json
   - tmp
   - vendor
+  - TODO
 
 # SEO Related
 google_site_verification : 'google4787a8f78512a353.html'
@@ -140,7 +141,10 @@ author:
     en             : "Brazil"
     pt             : "Brasil"
     de             : "Brasilien"
-  employer         :
+  employer:
+    en             : "Bahia Federal University"
+    pt             : "Universidade Federal da Bahia"
+    de             : "Bahia Bundesuniversität"
   pubmed           :
   googlescholar    :
   email            : "bertolinocastro@gmail.com"
@@ -202,6 +206,7 @@ exclude:
   - package.json
   - tmp
   - vendor
+  - TODO
 keep_files:
   - .git
   - .svn
@@ -228,7 +233,8 @@ kramdown:
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
 
-
+# Refer to: https://jekyllrb.com/docs/collections/
+# ..and to: https://jekyllrb.com/docs/permalinks/#collections
 # Collections
 collections:
   # teaching:
@@ -244,7 +250,7 @@ collections:
   #   output: true
   #   permalink: /:collection/:path/
 
-
+# Refer to: https://jekyllrb.com/docs/configuration/front-matter-defaults/
 # Defaults
 defaults:
   # _posts
@@ -307,10 +313,11 @@ sass:
   style: compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
 
 
+# Refer to: https://jekyllrb.com/docs/pagination/
 # Outputting
 permalink: /:categories/:title/
 # paginate: 5 # amount of posts to show
-# paginate_path: /page:num/
+# paginate_path: /posts/page:num/
 timezone: America/Bahia # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
@@ -331,6 +338,7 @@ whitelist:
   - jemoji
 
 
+# Refer to: https://jekyllrb.com/docs/posts/#tags-and-categories
 # Archives
 #  Type
 #  - GitHub Pages compatible archive pages built with Liquid ~> type: liquid (default)
