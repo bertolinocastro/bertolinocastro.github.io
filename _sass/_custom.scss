@@ -86,7 +86,6 @@
 
     li {
       margin: .5em;
-      padding: .3em .5em;
 
       @include breakpoint($large) {
         margin: .5em auto;
@@ -100,6 +99,13 @@
       &:hover {
         background: $gray;
         cursor: pointer;
+      }
+
+      a {
+        display: block;
+        padding: .3em .5em;
+        text-decoration: none;
+        color: inherit;
       }
     }
   }
