@@ -14,7 +14,8 @@ gem "github-pages", '~> 206', group: :jekyll_plugins
 # If you want to use Jekyll native, uncomment the line below.
 # To upgrade, run `bundle update`.
 
-gem "jekyll", '~> 4.0'
+# gem "jekyll", '~> 4.0'
+gem "jekyll", '~> 3.8.7'
 
 gem "wdm", "~> 0.1.1" if Gem.win_platform?
 
