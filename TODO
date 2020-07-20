@@ -1,4 +1,7 @@
 
+- Follow guide below to publish page with polyglot plugins!
+  https://jekyllrb.com/docs/continuous-integration/github-actions/
+
 - Create js code and html code to switch between languages
 
 - Create localized date format strings [x]

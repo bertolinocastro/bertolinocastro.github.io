@@ -337,6 +337,7 @@ plugins:
   - jekyll-redirect-from
 # mimic GitHub Pages with --safe
 whitelist:
+  - jekyll-polyglot
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
