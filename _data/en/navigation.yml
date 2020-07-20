@@ -2,11 +2,11 @@
 main:
   - title: "Publications"
     url: /publications/
-  #  children: # being tested in /test_page/
-  #    - title: 'filho 01'
-  #      url: 'google.com'
-  #    - title: 'filho 02'
-  #      url: 'ibm.com'
+    # children: # being tested in /test_page/
+    #   - title: 'filho 01'
+    #     url: 'google.com'
+    #   - title: 'filho 02'
+    #     url: 'ibm.com'
 
   # - title: "Talks"
   #   url: /talks/

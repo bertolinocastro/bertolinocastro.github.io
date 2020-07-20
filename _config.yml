@@ -260,6 +260,7 @@ defaults:
     values:
       layout: single
       author_profile: true
+      language_switcher: true
       read_time: true
       comments: true
       share: true
@@ -271,6 +272,7 @@ defaults:
     values:
       layout: single
       author_profile: true
+      language_switcher: true
   # _teaching
   - scope:
       path: ""
@@ -278,6 +280,7 @@ defaults:
     values:
       layout: single
       author_profile: true
+      language_switcher: true
       share: true
       comments: true
   # _publications
@@ -287,6 +290,7 @@ defaults:
     values:
       layout: single
       author_profile: true
+      language_switcher: true
       share: true
       comments: true
   # _portfolio
@@ -296,6 +300,7 @@ defaults:
     values:
       layout: single
       author_profile: true
+      language_switcher: true
       share: true
       comment: true
   # _talks
@@ -305,6 +310,7 @@ defaults:
     values:
       layout: talk
       author_profile: true
+      language_switcher: true
       share: true
 
 # Sass/SCSS

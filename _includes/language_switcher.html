@@ -1,0 +1,9 @@
+{% include base_path %}
+
+<div class="language-switcher">
+  <ul>
+    {% for lang in site.languages %}
+      <li class="{% if lang == site.active_lang %}active{% endif %}" itemprop="availableLanguage" itemscope itemtype="http://schema.org/Language"><span itemprop="name">{{lang | upcase}}</span></li>
+    {% endfor %}
+  </ul>
+</div>
