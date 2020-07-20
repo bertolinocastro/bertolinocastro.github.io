@@ -5,6 +5,10 @@
 
 - Add missing translated labels to 'de.yml'
 
+- Correct breadcrumbs middle links. They simply point to nowhere
+  May be use the below approach or simply make a workaround with pages (like year-archive) and make them show subdirectory content
+  https://simpleit.rocks/ruby/jekyll/tutorials/how-to-create-breadcrumbs-with-hierarchical-categories-in-jekyll/
+
 - Have a look at embedding instagram content
   https://developers.facebook.com/docs/instagram/embedding
 
