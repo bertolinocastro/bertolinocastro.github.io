@@ -3,7 +3,7 @@
 <div class="language-switcher">
   <ul>
     {% for lang in site.languages %}
-      <li class="{% if lang == site.active_lang %}active{% endif %}" itemprop="availableLanguage" itemscope itemtype="http://schema.org/Language"><a href="{% unless lang == site.default_lang %}/{{lang}}{% endunless %}{{page.permalink}}"><span itemprop="name">{{lang | upcase}}</span></a></li>
+      <li class="{% if lang == site.active_lang %}active{% endif %}" itemprop="availableLanguage" itemscope itemtype="http://schema.org/Language"><a href="{{base_path}}{% unless lang == site.default_lang %}/{{lang}}{% endunless %}{{page.permalink}}"><span itemprop="name">{{lang | upcase}}</span></a></li>
     {% endfor %}
   </ul>
 </div>
