@@ -23,7 +23,7 @@ gem "wdm", "~> 0.1.1" if Gem.win_platform?
 group :jekyll_plugins do
   # gem "jekyll-archives"
   gem 'jekyll-paginate', '~> 1.1'
-  gem 'jekyll-feed', '~> 0.15.0'
+  gem 'jekyll-feed', '~> 0.13.0'
   gem 'jekyll-sitemap', '~> 1.4'
   gem 'hawkins', '~> 2.0', '>= 2.0.5'
   gem 'jekyll-polyglot', '~> 1.3', '>= 1.3.3'
