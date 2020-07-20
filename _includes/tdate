@@ -1,0 +1,7 @@
+{% comment %}Usage: include tdate date=date format=format (different from default in ui-text) {% endcomment %}
+{% assign def = "1900-01-01" %}
+{% assign format = include.format | default: site.data.ui-text.date_basic_format %}
+{% assign num_day = include.date | date: "%w" | plus: 0 %}
+{% assign num_month = include.date | date: "%-m" | plus: -1 %}
+{% assign format = format | replace: "%a",  site.data.ui-text.short_weekday[num_day] | replace: "%A",  site.data.ui-text.long_weekday[num_day] | replace: "%b",  site.data.ui-text.short_month[num_month] | replace: "%B",  site.data.ui-text.long_month[num_month] %}
+{{ include.date | default: def | date: format }}

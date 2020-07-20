@@ -17,6 +17,7 @@ tags_label                 : "Tags:"
 categories_label           : "Categorias:"
 date_label                 : "Publicado em:"
 date_modified_label        : "Atualizado em:"
+date_basic_format          : "%d de %B de %Y"
 comments_label             : "Deixe um comentário"
 comments_title             :
 more_label                 : "Aprenda Mais"
@@ -45,3 +46,46 @@ comment_success_msg        : "Obrigado por seu comentário! Ele será exibido no
 comment_error_msg          : "Desculpe, houve um erro com o seu envio. Certifique-se de que todos os campos obrigatórios foram preenchidos e tente novamente."
 loading_label              : "Carregando..."
 sitemap                    : "Mapa do Site"
+
+short_weekday:
+  - Dom
+  - Seg
+  - Ter
+  - Qua
+  - Qui
+  - Sex
+  - Sáb
+long_weekday:
+  - Domingo
+  - Segunda
+  - Terça
+  - Quarta
+  - Quinta
+  - Sexta
+  - Sábado
+short_month:
+  - Jan
+  - Fev
+  - Mar
+  - Abr
+  - Mai
+  - Jun
+  - Jul
+  - Ago
+  - Set
+  - Out
+  - Nov
+  - Dez
+long_month:
+  - Janeiro
+  - Fevereiro
+  - Março
+  - Abril
+  - Maio
+  - Junho
+  - Julho
+  - Agosto
+  - Setembro
+  - Outobro
+  - Novembro
+  - Dezembro

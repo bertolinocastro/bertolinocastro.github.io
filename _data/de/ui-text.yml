@@ -17,7 +17,7 @@ tags_label                 : "Tags:"
 categories_label           : "Categories:"
 date_label                 : "Published:"
 date_modified_label        : "Updated:"
-date_basic_format          : "%B %d, %Y"
+date_basic_format          : "%d. %B %Y"
 comments_label             : "Leave a Comment"
 comments_title             : "Comments"
 more_label                 : "Learn More"
@@ -48,44 +48,44 @@ loading_label              : "Loading..."
 sitemap                    : "Sitemap"
 
 short_weekday:
-  - Sun
-  - Mon
-  - Tue
-  - Wed
-  - Thu
-  - Fri
-  - Sat
+  - So
+  - Mo
+  - Di
+  - Mi
+  - Do
+  - Fr
+  - Sa
 long_weekday:
-  - Sunday
-  - Monday
-  - Tuesday
-  - Wednesday
-  - Thursday
-  - Friday
-  - Saturday
+  - Sonntag
+  - Montag
+  - Dienstag
+  - Mittwoch
+  - Donnerstag
+  - Freitag
+  - Samstag
 short_month:
   - Jan
   - Feb
-  - Mar
+  - Mär
   - Apr
-  - May
+  - Mai
   - Jun
   - Jul
   - Aug
   - Sep
-  - Oct
+  - Okt
   - Nov
-  - Dec
+  - Dez
 long_month:
-  - January
-  - February
-  - March
+  - Januar
+  - Februar
+  - März
   - April
-  - May
-  - June
-  - July
+  - Mai
+  - Juni
+  - Juli
   - August
   - September
-  - October
+  - Oktober
   - November
-  - December
+  - Dezember

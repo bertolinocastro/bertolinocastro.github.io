@@ -17,7 +17,7 @@
     <p class="comment__date">
       {% if include.date %}
         {% if include.commentid %}<a href="#comment{{ include.commentid }}">{% endif %}
-        <time datetime="{{ include.date | date_to_xmlschema }}">{{ include.date | date: "%B %d, %Y at %I:%M %p" }}</time>
+        <time datetime="{{ include.date | date_to_xmlschema }}">{% include tdate date=include.date format="%B %d, %Y at %I:%M %p" %}</time>
         {% if include.commentid %}</a>{% endif %}
       {% endif %}
     </p>

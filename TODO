@@ -1,7 +1,9 @@
 
 - Create js code and html code to switch between languages
 
-- Create localized date format strings
+- Create localized date format strings [x]
+
+- Add missing translated labels to 'de.yml'
 
 - Have a look at embedding instagram content
   https://developers.facebook.com/docs/instagram/embedding
