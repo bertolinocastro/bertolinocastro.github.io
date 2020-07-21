@@ -10,6 +10,10 @@
   https://jekyllrb.com/docs/continuous-integration/github-actions/
 
 - Create js code and html code to switch between languages
+  https://meumobi.github.io/jekyll/2019/06/05/multi-languages-with-jekyll.html
+  https://www.w3.org/International/questions/qa-html-language-declarations#langvalues
+  https://github.com/jekyll/jekyll-sitemap/issues/88#issuecomment-383849534
+  https://www.w3.org/International/questions/qa-html-language-declarations#contentvsattribute
 
 - Create localized date format strings [x]
 
