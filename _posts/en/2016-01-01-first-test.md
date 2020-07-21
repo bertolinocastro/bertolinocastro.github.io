@@ -1,7 +1,7 @@
 ---
 title: 'Test 1'
 date: 2016-01-01
-date_modified:
+modified: true
 permalink: /posts/2016/01/test/
 excerpt: 'um excerto qualquer aqui'
 tags:
