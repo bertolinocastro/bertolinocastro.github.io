@@ -18,14 +18,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         # with:
-        #   ref: main # switching to main branch, in case it's not the default
-
-      # - name: Build
-      #   run: |
-      #     bundle install
-      #     bundle exec jekyll build
-
-      # - run: somebuild
+        #   ref: main # switching to main branch, in case it's not the branch from where I pushed
 
       - name: Setup ruby
         uses: ruby/setup-ruby@v1
@@ -49,20 +42,3 @@ jobs:
           force_orphan: true
           user_name: 'bertolinocastro-bot'
           user_email: 'bertolinocastro-bot@users.noreply.github.com'
-
-      # - uses: helaili/jekyll-action@2.0.3
-      #   env:
-      #     JEKYLL_PAT: ${{ secrets.JEKYLL_PAT }}
-      #     GITHUB_ACTOR: 'bertolinocastro-bot'
-
-      # - name: Deploy
-      #   uses: peaceiris/actions-gh-pages@v3
-      #   with:
-      #     github_token: ${{ secrets.GITHUB_TOKEN }}
-      #     publish_dir: ./_site
-      #     publish_branch: master
-      #     # enable_jekyll: false
-      #     force_orphan: true
-      #     user_name: 'bertolinocastro-bot'
-      #     user_email: 'jgabbc@live.com'
-      #     user_email: 'bertolinocastro-bot@users.noreply.github.com'
