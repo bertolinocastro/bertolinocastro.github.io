@@ -336,6 +336,7 @@ plugins:
   - jekyll-feed
   - jekyll-redirect-from
   - jekyll-minifier
+  - jekyll-last-modified-at
 # mimic GitHub Pages with --safe
 whitelist:
   - jekyll-polyglot
@@ -409,5 +410,8 @@ jekyll-minifier:
     - tmp
     - vendor
     - TODO
+
+last-modified-at:
+  date-format: '%Y-%m-%d'
 
 github: [metadata]

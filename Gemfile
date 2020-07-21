@@ -29,4 +29,5 @@ group :jekyll_plugins do
   gem 'jekyll-polyglot', '~> 1.3', '>= 1.3.3'
   gem 'jekyll-minifier', '~> 0.1.10'
   # gem 'jekyll-admin' # CMS-like feature to edit files
+  gem 'jekyll-last-modified-at', '~> 1.3'
 end
