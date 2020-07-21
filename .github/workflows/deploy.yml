@@ -17,8 +17,8 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
-        with:
-          ref: main # switching to main branch, in case it's not the default
+        # with:
+        #   ref: main # switching to main branch, in case it's not the default
 
       # - name: Build
       #   run: |
@@ -27,10 +27,32 @@ jobs:
 
       # - run: somebuild
 
-      - uses: helaili/jekyll-action@2.0.3
-        env:
-          JEKYLL_PAT: ${{ secrets.JEKYLL_PAT }}
-          # GITHUB_ACTOR: 'bertolinocastro-bot'
+      - name: Setup ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.7
+
+      - name: Install dep & build site
+        uses: limjh16/jekyll-action-ts@v2
+        with:
+          enable_cache: true
+          # custom_opts: '--drafts --future'
+          ### If you need to specify any Jekyll build options, enable the above input
+          ### Flags accepted can be found here https://jekyllrb.com/docs/configuration/options/#build-command-options
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: master
+          publish_dir: './_site'
+          user_name: 'bertolinocastro-bot'
+          user_email: 'bertolinocastro-bot@users.noreply.github.com'
+
+      # - uses: helaili/jekyll-action@2.0.3
+      #   env:
+      #     JEKYLL_PAT: ${{ secrets.JEKYLL_PAT }}
+      #     GITHUB_ACTOR: 'bertolinocastro-bot'
 
       # - name: Deploy
       #   uses: peaceiris/actions-gh-pages@v3
@@ -42,3 +64,4 @@ jobs:
       #     force_orphan: true
       #     user_name: 'bertolinocastro-bot'
       #     user_email: 'jgabbc@live.com'
+      #     user_email: 'bertolinocastro-bot@users.noreply.github.com'
