@@ -1,0 +1,45 @@
+name: Build and deploy Jekyll site to GitHub Pages on master branch
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  # github-pages:
+  #   runs-on: ubuntu-16.04
+  #   steps:
+  #     - uses: actions/checkout@v2
+  #     - uses: helaili/jekyll-action@2.0.1
+  #       env:
+  #         JEKYLL_PAT: ${{ secrets.JEKYLL_PAT }}
+  deploy:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: main # switching to main branch, in case it's not the default
+
+      # - name: Build
+      #   run: |
+      #     bundle install
+      #     bundle exec jekyll build
+
+      # - run: somebuild
+
+      - uses: helaili/jekyll-action@2.0.3
+        env:
+          JEKYLL_PAT: ${{ secrets.JEKYLL_PAT }}
+          GITHUB_ACTOR: 'bertolinocastro-bot'
+
+
+      # - name: Deploy
+      #   uses: peaceiris/actions-gh-pages@v3
+      #   with:
+      #     github_token: ${{ secrets.GITHUB_TOKEN }}
+      #     publish_dir: ./_site
+      #     publish_branch: master
+      #     # enable_jekyll: false
+      #     force_orphan: true
+      #     user_name: 'bertolinocastro-bot'
+      #     user_email: 'jgabbc@live.com'
