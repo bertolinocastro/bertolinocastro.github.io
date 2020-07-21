@@ -28,6 +28,7 @@ group :jekyll_plugins do
   # gem 'hawkins', '~> 2.0', '>= 2.0.5' # servers only for livereload (where serving locally)
   gem 'jekyll-polyglot', '~> 1.3', '>= 1.3.3'
   gem 'jekyll-minifier', '~> 0.1.10'
-  gem 'therubyracer', :platforms => :ruby
+  gem 'therubyracer', '~> 0.12.3', :platforms => :ruby
+  gem 'execjs', '~> 2.7'
   # gem 'jekyll-admin' # CMS-like feature to edit files
 end
