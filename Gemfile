@@ -25,7 +25,8 @@ group :jekyll_plugins do
   gem 'jekyll-paginate', '~> 1.1'
   gem 'jekyll-feed', '~> 0.13.0'
   gem 'jekyll-sitemap', '~> 1.4'
-  gem 'hawkins', '~> 2.0', '>= 2.0.5'
+  # gem 'hawkins', '~> 2.0', '>= 2.0.5' # servers only for livereload (where serving locally)
   gem 'jekyll-polyglot', '~> 1.3', '>= 1.3.3'
+  gem 'jekyll-minifier', '~> 0.1.10'
   # gem 'jekyll-admin' # CMS-like feature to edit files
 end
