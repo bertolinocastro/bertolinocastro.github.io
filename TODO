@@ -3,6 +3,9 @@
 
 - Change "calendar" icon for date & modified date. It's horrible and looks like a battery!
 
+- Ideas on how to translate tags and categories using Polyglot
+  https://github.com/untra/polyglot/issues/8
+
 - Follow guide below to publish page with polyglot plugins! [x]
   https://jekyllrb.com/docs/continuous-integration/github-actions/
 
