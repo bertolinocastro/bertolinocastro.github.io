@@ -1,4 +1,6 @@
 
+- Replace the language-switcher in the layout. Try to put it on top of the "article" in single and related layouts. I.e., not in the same level as the breadcrumbs, but on top of them or below them, and aligned with the article, that means not on top of "sidebar" (when in $large mode)
+
 - Change "calendar" icon for date & modified date. It's horrible and looks like a battery!
 
 - Follow guide below to publish page with polyglot plugins! [x]
