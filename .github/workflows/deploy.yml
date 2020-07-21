@@ -46,6 +46,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: master
           publish_dir: './_site'
+          force_orphan: true
           user_name: 'bertolinocastro-bot'
           user_email: 'bertolinocastro-bot@users.noreply.github.com'
 
