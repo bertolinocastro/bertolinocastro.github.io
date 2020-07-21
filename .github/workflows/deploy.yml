@@ -42,3 +42,4 @@ jobs:
           force_orphan: true
           user_name: 'bertolinocastro-bot'
           user_email: 'bertolinocastro-bot@users.noreply.github.com'
+          commit_message: ${{ github.event.head_commit.message }}
