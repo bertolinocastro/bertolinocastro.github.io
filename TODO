@@ -3,6 +3,8 @@
 
 - Change "calendar" icon for date & modified date. It's horrible and looks like a battery!
 
+- Try to get rid of "META" string in "single layout" when there is no meta content to be displayed
+
 - Ideas on how to translate tags and categories using Polyglot
   https://github.com/untra/polyglot/issues/8
 
