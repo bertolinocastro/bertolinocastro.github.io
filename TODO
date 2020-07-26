@@ -5,6 +5,8 @@
 
 - Try to get rid of "META" string in "single layout" when there is no meta content to be displayed
 
+- Add "terms" page to the footer of the default layout. Somewhere in the same line as "sitemap"
+
 - Ideas on how to translate tags and categories using Polyglot
   https://github.com/untra/polyglot/issues/8
 
