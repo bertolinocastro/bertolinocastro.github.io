@@ -66,6 +66,7 @@ default_lang: 'en'
 parallel_localization: true
 lang_from_path: true
 exclude_from_localization:
+  - _pages/sitemap.xml
   - assets/css
   - assets/fonts
   - assets/js/plugins
@@ -214,6 +215,21 @@ exclude:
   - tmp
   - vendor
   - TODO
+  # pages created by academicpages, but which I do not see very useful for now
+  - _pages/non-menu-page.md
+  - _pages/archive-layout-with-content.md
+  - _pages/collection-archive.html
+  - _pages/markdown.md
+  - _pages/page-archive.html
+  - _pages/portfolio.html
+  - _pages/talkmap.html
+  - _pages/talks.html
+  - _pages/teaching.html
+  - talkmap
+  - markdown_generator
+  - _talks
+  - _teaching
+  - _portfolio
 keep_files:
   - .git
   - .svn
@@ -280,16 +296,16 @@ defaults:
       layout: single
       author_profile: true
       language_switcher: true
-  # _teaching
-  - scope:
-      path: ""
-      type: teaching
-    values:
-      layout: single
-      author_profile: true
-      language_switcher: true
-      share: true
-      comments: true
+  # # _teaching
+  # - scope:
+  #     path: ""
+  #     type: teaching
+  #   values:
+  #     layout: single
+  #     author_profile: true
+  #     language_switcher: true
+  #     share: true
+  #     comments: true
   # _publications
   - scope:
       path: ""
@@ -300,25 +316,25 @@ defaults:
       language_switcher: true
       share: true
       comments: true
-  # _portfolio
-  - scope:
-      path: ""
-      type: portfolio
-    values:
-      layout: single
-      author_profile: true
-      language_switcher: true
-      share: true
-      comment: true
-  # _talks
-  - scope:
-      path: ""
-      type: talks
-    values:
-      layout: talk
-      author_profile: true
-      language_switcher: true
-      share: true
+  # # _portfolio
+  # - scope:
+  #     path: ""
+  #     type: portfolio
+  #   values:
+  #     layout: single
+  #     author_profile: true
+  #     language_switcher: true
+  #     share: true
+  #     comment: true
+  # # _talks
+  # - scope:
+  #     path: ""
+  #     type: talks
+  #   values:
+  #     layout: talk
+  #     author_profile: true
+  #     language_switcher: true
+  #     share: true
 
 # Sass/SCSS
 sass:
@@ -337,18 +353,18 @@ timezone: America/Bahia # http://en.wikipedia.org/wiki/List_of_tz_database_time_
 # Plugins
 plugins:
   - jekyll-polyglot
+  - jekyll-last-modified-at
   - jekyll-paginate
-  - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
   - jekyll-redirect-from
+  # - jekyll-sitemap
   - jekyll-minifier
-  - jekyll-last-modified-at
 # mimic GitHub Pages with --safe
 whitelist:
   - jekyll-polyglot
   - jekyll-paginate
-  - jekyll-sitemap
+  # - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
   - jemoji

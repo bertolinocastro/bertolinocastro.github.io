@@ -1,5 +1,7 @@
 # User interface text and labels
 page                       : "Página"
+pages                      : "Páginas"
+posts                      : "Posts"
 pagination_previous        : "Anterior"
 pagination_next            : "Próxima"
 breadcrumb_home_label      : "Início"
