@@ -1,6 +1,4 @@
 
-- Change "calendar" icon for date & modified date. It's horrible and looks like a battery!
-
 - Try to get rid of "META" string in "single layout" when there is no meta content to be displayed
 
 - Add "terms" page to the footer of the default layout. Somewhere in the same line as "sitemap"
