@@ -1,5 +1,6 @@
 {% include base_path %}
 
+{% if page.language_switcher %}
 <div class="language-switcher">
   <ul>
     {% for lang in site.languages %}
@@ -7,3 +8,4 @@
     {% endfor %}
   </ul>
 </div>
+{% endif %}

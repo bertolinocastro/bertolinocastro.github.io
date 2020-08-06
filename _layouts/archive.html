@@ -6,10 +6,18 @@ layout: default
   {% include page__hero.html %}
 {% endif %}
 
-{% if page.url != "/" and site.breadcrumbs %}
-  {% unless paginator %}
-    {% include breadcrumbs.html %}
-  {% endunless %}
+{% if page.language_switcher or site.breadcrumbs %}
+<div id="bread_langswitcher_container">
+  <div class="bl_container">
+  {% include language_switcher.html %}
+
+  {% if page.url != "/" and site.breadcrumbs %}
+    {% unless paginator %}
+      {% include breadcrumbs.html %}
+    {% endunless %}
+  {% endif %}
+  </div>
+</div>
 {% endif %}
 
 <div id="main" role="main">
