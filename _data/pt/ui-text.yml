@@ -3,7 +3,7 @@ page                       : "Página"
 pagination_previous        : "Anterior"
 pagination_next            : "Próxima"
 breadcrumb_home_label      : "Início"
-breadcrumb_separator       : "/"
+breadcrumb_separator       : "&nbsp;/&nbsp;"
 published_in_label         : "Publicado em"
 recommended_citation_label : "Citação recomendada"
 permalink_label            :
