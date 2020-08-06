@@ -1,6 +1,4 @@
 
-- Try to get rid of "META" string in "single layout" when there is no meta content to be displayed
-
 - Add "terms" page to the footer of the default layout. Somewhere in the same line as "sitemap"
 
 - Reorganize year-archive layout to be able to separate content based on categories or year
