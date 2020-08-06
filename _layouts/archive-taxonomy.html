@@ -3,6 +3,14 @@ layout: default
 author_profile: false
 ---
 
+{% if page.language_switcher %}
+<div id="bread_langswitcher_container">
+  <div class="bl_container">
+  {% include language_switcher.html %}
+  </div>
+</div>
+{% endif %}
+
 <div id="main" role="main">
   {% include sidebar.html %}
 
