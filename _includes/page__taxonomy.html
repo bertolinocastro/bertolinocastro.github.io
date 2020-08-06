@@ -1,9 +1,17 @@
 {% include base_path %}
 
-{% if site.tag_archive.type and page.tags[0] %}
-  {% include tag-list.html %}
-{% endif %}
+{% if site.tag_archive.type and page.tags[0] or site.category_archive.type and page.categories[0] %}
 
-{% if site.category_archive.type and page.categories[0] %}
-  {% include category-list.html %}
+  {% if site.data.ui-text.meta_label %}
+    <h4 class="page__meta-title">{{ site.data.ui-text.meta_label }}</h4>
+  {% endif %}
+
+  {% if site.tag_archive.type and page.tags[0] %}
+    {% include tag-list.html %}
+  {% endif %}
+
+  {% if site.category_archive.type and page.categories[0] %}
+    {% include category-list.html %}
+  {% endif %}
+
 {% endif %}
