@@ -2,6 +2,7 @@
 - Add "terms" page to the footer of the default layout. Somewhere in the same line as "sitemap"
 
 - Reorganize year-archive layout to be able to separate content based on categories or year
+  https://stackoverflow.com/questions/19086284/jekyll-liquid-templating-how-to-group-blog-posts-by-year
 
 - Ideas on how to translate tags and categories using Polyglot
   https://github.com/untra/polyglot/issues/8
