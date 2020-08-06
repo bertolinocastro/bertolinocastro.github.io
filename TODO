@@ -1,25 +1,20 @@
 
-- Replace the language-switcher in the layout. Try to put it on top of the "article" in single and related layouts. I.e., not in the same level as the breadcrumbs, but on top of them or below them, and aligned with the article, that means not on top of "sidebar" (when in $large mode)
-
 - Change "calendar" icon for date & modified date. It's horrible and looks like a battery!
 
 - Try to get rid of "META" string in "single layout" when there is no meta content to be displayed
 
 - Add "terms" page to the footer of the default layout. Somewhere in the same line as "sitemap"
 
+- Reorganize year-archive layout to be able to separate content based on categories or year
+
 - Ideas on how to translate tags and categories using Polyglot
   https://github.com/untra/polyglot/issues/8
-
-- Follow guide below to publish page with polyglot plugins! [x]
-  https://jekyllrb.com/docs/continuous-integration/github-actions/
 
 - Create js code and html code to switch between languages
   https://meumobi.github.io/jekyll/2019/06/05/multi-languages-with-jekyll.html
   https://www.w3.org/International/questions/qa-html-language-declarations#langvalues
   https://github.com/jekyll/jekyll-sitemap/issues/88#issuecomment-383849534
   https://www.w3.org/International/questions/qa-html-language-declarations#contentvsattribute
-
-- Create localized date format strings [x]
 
 - Add missing translated labels to 'de.yml'
 
