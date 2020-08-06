@@ -1,4 +1,41 @@
 
+/* Some icons roughly following Font-awesome protocol */
+.b-ico {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: text-top;
+}
+
+.b-ico-o5 {
+  opacity: .5;
+}
+
+.b-ico-cal-c { // creation calendar icon
+  background-image: url('/images/icons/calendar_creation.svg');
+}
+
+.b-ico-cal-u { // update calendar icon
+  background-image: url('/images/icons/calendar_update.svg');
+}
+
+.b-ico-clo-r { // update calendar icon
+  background-image: url('/images/icons/clock_read.svg');
+}
+
+/* page meta related */
+/* reusing academic-pages css */
+.page__date{
+  font-size: .85em;
+  opacity: .6;
+  margin-top: 0;
+
+  &:not(:last-of-type){
+    margin-bottom: 0;
+  }
+}
+
+
 /* Staticman comments related */
 .comment {
   padding: .5em 0 .5em 10px;
