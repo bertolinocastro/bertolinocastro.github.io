@@ -66,7 +66,13 @@ default_lang: 'en'
 parallel_localization: true
 lang_from_path: true
 exclude_from_localization:
-  - assets
+  - assets/css
+  - assets/fonts
+  - assets/js/plugins
+  - assets/js/vendor
+  - assets/js/_main.js
+  - assets/js/collapse.js
+  - assets/js/main.min.js
   - images
   - files
   - markdown_generator
@@ -184,6 +190,7 @@ include:
   - .htaccess
   - _pages
   - files
+  - assets/js/lang-switcher.js
 exclude:
   - .asset-cache
   - .bundle
