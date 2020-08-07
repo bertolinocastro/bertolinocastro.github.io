@@ -1,7 +1,7 @@
 ---
 title: Guia iniciante para Supercomputação
-date: 2020
-permalink: /starting-on-supercomputing/
+date: 2020-08-30
+permalink: /posts/2020/starting-on-supercomputing/
 lang: pt
 tags: [supercomputing, programming, parallel]
 categories: [supercomputing]
