@@ -1,9 +1,4 @@
 
-- Create manual sitemap to generate proper xml pointing to polyglot generated files
-  https://github.com/jekyll/jekyll-sitemap/issues/88#issuecomment-383849534
-  https://github.com/jekyll/jekyll-sitemap/blob/master/lib/sitemap.xml
-  https://github.com/untra/polyglot/issues/29
-
 - Add "terms" page to the footer of the default layout. Somewhere in the same line as "sitemap"
 
 - Reorganize year-archive layout to be able to separate content based on categories or year
