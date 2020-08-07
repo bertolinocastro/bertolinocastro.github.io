@@ -92,3 +92,9 @@ long_month:
   - Oktober
   - November
   - Dezember
+
+collections_locale:
+  publications: 'Publications'
+  teaching: 'Teaching'
+  talks: 'Talks'
+  portfolio: 'Portfolio'

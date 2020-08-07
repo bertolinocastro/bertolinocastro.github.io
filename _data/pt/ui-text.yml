@@ -93,3 +93,9 @@ long_month:
   - Outobro
   - Novembro
   - Dezembro
+
+collections_locale:
+  publications: 'Publicações'
+  teaching: 'Ensino'
+  talks: 'Talks'
+  portfolio: 'Portfólio'
