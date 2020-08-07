@@ -9,7 +9,7 @@
 # locale                   : "en-US"
 title                    : "Bertoblog"
 title_separator          : "-"
-name                     : &name "Gabriel Bertolino"
+name                     : &name "Bertoblog"
 description              : &description
   en : "Undergrad in Physics, quantum computing scientist aspirant, developer in daily life and lover of learning new languages"
   pt : "Estudante de física maluco"

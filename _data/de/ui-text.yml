@@ -46,6 +46,8 @@ comment_success_msg        : "Thanks for your comment! It will show on the site 
 comment_error_msg          : "Sorry, there was an error with your submission. Please make sure all required fields have been completed and try again."
 loading_label              : "Loading..."
 sitemap                    : "Sitemap"
+a_fork_of                  : "a fork of"
+maint_updt_by              : "Maintained and updated by"
 
 short_weekday:
   - So

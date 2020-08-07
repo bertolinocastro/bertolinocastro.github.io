@@ -47,6 +47,8 @@ comment_success_msg        : "Obrigado por seu comentário! Ele será exibido no
 comment_error_msg          : "Desculpe, houve um erro com o seu envio. Certifique-se de que todos os campos obrigatórios foram preenchidos e tente novamente."
 loading_label              : "Carregando..."
 sitemap                    : "Mapa do Site"
+a_fork_of                  : "um fork de"
+maint_updt_by              : "Mantido e atualizado por"
 
 short_weekday:
   - Dom
