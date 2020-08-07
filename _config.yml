@@ -149,7 +149,7 @@ author:
     de             : "Brasilien"
   employer:
     en             : "Bahia Federal University"
-    pt             : "Universidade Federal da Bahia"
+    pt             : "Univ. Federal da Bahia" # "Universidade Federal da Bahia" -> it breaks in bio for medium layouts
     de             : "Bahia Bundesuniversität"
   pubmed           :
   googlescholar    :
