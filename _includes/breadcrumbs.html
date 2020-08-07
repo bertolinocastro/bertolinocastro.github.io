@@ -11,13 +11,16 @@
   {% assign path_type = nil %}
   {% assign crumb_path = '/' %}
 {% else %}
-  {% assign crumb_path = site.categories.path %}
+  {% assign crumb_path = site.categories.path | default: '/' %}
 {% endif %}
 
 <nav class="breadcrumbs">
   <ol itemscope itemtype="http://schema.org/BreadcrumbList">
     {% assign crumbs = page.url | split: '/' %}
     {% assign i = 1 %}
+    {% if page.collection == 'posts' %}
+      {% assign prep = crumbs[1] %}
+    {% endif %}
     {% for crumb in crumbs offset: 1 %}
       {% if forloop.first %}
         <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
@@ -31,10 +34,15 @@
       {% else %}
         {% assign i = i | plus: 1 %}
         <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-          <a href="{{ base_path }}/{{ crumb | downcase | replace: '%20', '-' | prepend: path_type | prepend: crumb_path }}" itemprop="item"><span itemprop="name">{{ crumb | replace: '-', ' ' | replace: '%20', ' ' | capitalize }}</span></a>
+        {% if page.collection == 'posts' and i == 3 %}
+          <a href="{{ base_path }}/{{ prep }}/#{{ crumb }}" itemprop="item"><span itemprop="name">{% if i == 2 and crumb == page.collection %}{{ site.data.collections[crumb] }}{% else %}{{ crumb }}{% endif %}</span></a>
+        {% else %}
+          <a href="{{ base_path }}{{ crumb | downcase | replace: '%20', '-'  | prepend: path_type | prepend: crumb_path }}" itemprop="item"><span itemprop="name">{% if i == 2 and crumb == page.collection %}{{ site.data.collections[crumb] | default: crumb | replace: '-', ' ' | replace: '%20', ' ' | capitalize }}{% else %}{{ crumb | replace: '-', ' ' | replace: '%20', ' ' | capitalize }}{% endif %}</span></a>
+        {% endif %}
           <meta itemprop="position" content="{{ i }}" />
         </li>
         <span class="sep">{{ site.data.ui-text.breadcrumb_separator }}</span>
+
       {% endif %}
     {% endfor %}
   </ol>
