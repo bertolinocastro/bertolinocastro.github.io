@@ -1,8 +1,9 @@
 ---
+published: false
 title: 'Test 1'
 date: 2016-01-01
 modified: true
-permalink: /posts/2016/01/test/
+permalink: /posts/2016/test/
 excerpt: 'um excerto qualquer aqui'
 tags:
   - cool posts
