@@ -7,10 +7,6 @@
   vertical-align: text-top;
 }
 
-.b-ico-o5 {
-  opacity: .5;
-}
-
 .b-ico-cal-c { // creation calendar icon
   background-image: url('/images/icons/calendar_creation.svg');
 }
@@ -27,7 +23,7 @@
 /* reusing academic-pages css */
 .page__date{
   font-size: .85em;
-  opacity: .6;
+  color: rgba( $text-color, .6);
   margin-top: 0;
 
   &:not(:last-of-type){

@@ -36,7 +36,7 @@ layout: default
         <header>
           {% if page.title %}<h1 class="page__title" itemprop="headline">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</h1>{% endif %}
           {% if page.read_time %}
-            <p class="page__meta"><i class="b-ico b-ico-clo-r b-ico-o5" aria-hidden="true"></i> {% include read-time.html %}</p>
+            <p class="page__meta"><i class="b-ico b-ico-clo-r" aria-hidden="true"></i> {% include read-time.html %}</p>
           {% endif %}
         {% if page.modified %}
           <p class="page__date"><strong><i class="b-ico b-ico-cal-u" aria-hidden="true"></i>Date:</strong> <time datetime="{{ page.last_modified_at }}">{% include tdate date=page.last_modified_at %}</time></p>

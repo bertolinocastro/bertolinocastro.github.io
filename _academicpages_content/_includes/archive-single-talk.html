@@ -33,7 +33,7 @@
       {% endif %}
     </h2>
     {% if post.read_time %}
-      <p class="page__meta"><i class="b-ico b-ico-clo-r b-ico-o5" aria-hidden="true"></i> {% include read-time.html %}</p>
+      <p class="page__meta"><i class="b-ico b-ico-clo-r" aria-hidden="true"></i> {% include read-time.html %}</p>
     {% endif %}
     {% if post.date %}<p class="page__meta"><i class="b-ico b-ico-clo-r" aria-hidden="true"></i> {% include tdate date=post.date %}</p>{% endif %}
     {% if post.venue %}<p class="archive__item-excerpt" itemprop="description">{{post.type}}, {{ post.venue }},  {{post.location}} {% endif %}
