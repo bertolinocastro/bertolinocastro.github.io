@@ -20,7 +20,7 @@
     <span itemprop="keywords">
     {% for hash in category_hashes %}
       {% capture category_word %}{{ hash | strip_newlines }}{% endcapture %}
-      <a href="{{ base_path }}{{ category_word | slugify | prepend: path_type | prepend: site.category_archive.path }}" class="page__taxonomy-item" rel="tag">{{ site.data.categories[category_word] }}</a>{% unless forloop.last %}<span class="sep">, </span>{% endunless %}
+      <a href="{{ base_path }}{{ category_word | slugify | prepend: path_type | prepend: site.category_archive.path }}" class="page__taxonomy-item" rel="tag">{{ site.data.categories[category_word] | default: category_word }}</a>{% unless forloop.last %}<span class="sep">, </span>{% endunless %}
     {% endfor %}
     </span>
   </p>

@@ -20,7 +20,7 @@
     <span itemprop="keywords">
     {% for hash in tag_hashes %}
       {% capture tag_word %}{{ hash | strip_newlines }}{% endcapture %}
-      <a href="{{ base_path }}{{ tag_word | slugify | prepend: path_type | prepend: site.tag_archive.path }}" class="page__taxonomy-item" rel="tag">{{ site.data.tags[tag_word] }}</a>{% unless forloop.last %}<span class="sep">, </span>{% endunless %}
+      <a href="{{ base_path }}{{ tag_word | slugify | prepend: path_type | prepend: site.tag_archive.path }}" class="page__taxonomy-item" rel="tag">{{ site.data.tags[tag_word] | default: tag_word }}</a>{% unless forloop.last %}<span class="sep">, </span>{% endunless %}
     {% endfor %}
     </span>
   </p>
