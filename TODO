@@ -1,7 +1,4 @@
 
-- Reorganize year-archive layout to be able to separate content based on categories or year
-  https://stackoverflow.com/questions/19086284/jekyll-liquid-templating-how-to-group-blog-posts-by-year
-
 - Correct breadcrumbs middle links. They simply point to nowhere
   May be use the below approach or simply make a workaround with pages (like year-archive) and make them show subdirectory content
   https://simpleit.rocks/ruby/jekyll/tutorials/how-to-create-breadcrumbs-with-hierarchical-categories-in-jekyll/
