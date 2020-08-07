@@ -1,12 +1,12 @@
 ---
 permalink: /
-title: "Hi, I'm Bertolino!"
-excerpt: "About me"
+title: "Hallo, ich bin Bertolino!"
+excerpt: "Über mich"
 author_profile: true
 redirect_from:
   - /about/
   - /about.html
-lang: en
+lang: de
 ---
 
 

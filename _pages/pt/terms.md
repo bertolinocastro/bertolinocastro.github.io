@@ -1,14 +1,14 @@
 ---
 permalink: /terms/
-title: "Terms and Privacy Policy"
+title: "Termos e Política de Privacidade"
 modified: 2016-06-06
-lang: en
+lang: pt
 ---
 
 {% include base_path %}
 {% include toc %}
 
-## Privacy Policy
+## Política de Privacidade
 
 The privacy of my visitors is extremely important. This Privacy Policy outlines the types of personal information that is received and collected and how it is used.
 

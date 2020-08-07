@@ -1,16 +1,16 @@
 ---
 layout: archive
-title: "Sitemap"
+title: "Mapa do Site"
 permalink: /sitemap/
 author_profile: true
-lang: en
+lang: pt
 ---
 
 {% include base_path %}
 
-A list of all the posts and pages found on the site. For you robots out there is an [XML version](< {{ base_path }}/sitemap.xml>) available for digesting as well.
+Uma lista de todos os posts e páginas existentes no site. Para os robôs por aí afora, existe também uma [versão XML](< {{ base_path }}/sitemap.xml>) disponível para digerir.
 
-<h2>Pages</h2>
+<h2>Páginas</h2>
 {% for post in site.pages %}
   {% if post.url == '/404.html' %}
     {% continue %}

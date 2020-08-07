@@ -1,7 +1,5 @@
 # User interface text and labels
 page                       : "Page"
-pages                      : "Pages"
-posts                      : "Posts"
 pagination_previous        : "Previous"
 pagination_next            : "Next"
 breadcrumb_home_label      : "Home"
