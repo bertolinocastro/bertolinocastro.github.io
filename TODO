@@ -1,6 +1,8 @@
 
 - Correct plural vs. singular in readtime label (1 minuto, instead of 1 minutos)
 
+- Create a way to show (like a grid or carroussel or whatever) new content (posts and pertinent collections content) in the home page (below my description)
+
 - Create archive single development based on archive single to expose scientific projects created
   -> Remember to add Zenodo information for each project, if applicable
 
