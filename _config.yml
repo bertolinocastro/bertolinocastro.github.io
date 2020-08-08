@@ -11,9 +11,9 @@ title                    : "Bertoblog"
 title_separator          : "-"
 name                     : &name "Bertoblog"
 description              : &description
-  en : "Undergrad in Physics, quantum computing scientist aspirant, developer in daily life and lover of learning new languages"
-  pt : "Estudante de física maluco"
-  de : "Dummkopf Student"
+  en : "A scientific Blog made by Bertolino"
+  pt : "Um blog científico feito por Bertolino"
+  de : "Ein wissenschaftliches Blog von Bertolino gemacht"
 url                      : https://bertolinocastro.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "bertolinocastro/bertolinocastro.github.io"
@@ -141,8 +141,8 @@ author:
   gravatar         : "gravatar.jpg"
   bio:
     en             : "Undergrad in Physics, quantum computing scientist aspirant, developer in daily life and lover of learning new languages"
-    pt             : "Bio em pt"
-    de             : "Biographie auf Deutsch"
+    pt             : "Graduando em Física, aspirante a cientista em computação quântica, desenvolvedor no dia-a-dia e apaixonado por aprender novas línguas"
+    de             : "Physik Student, Quantencomputerforscher-Aspirant, Entwickler im täglichen Leben und Liebhaber des Lernens neuer Sprachen"
   location:
     en             : "Brazil"
     pt             : "Brasil"
