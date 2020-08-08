@@ -259,6 +259,9 @@ kramdown:
 # ..and to: https://jekyllrb.com/docs/permalinks/#collections
 # Collections
 collections:
+  development:
+    output: true
+    permalink: /:collection/:path/
   # teaching:
   #   output: true
   #   permalink: /:collection/:path/
@@ -295,6 +298,16 @@ defaults:
       layout: single
       author_profile: true
       language_switcher: true
+  # _development
+  - scope:
+      path: ""
+      type: development
+    values:
+      layout: single
+      author_profile: true
+      language_switcher: true
+      share: true
+      comments: true
   # # _teaching
   # - scope:
   #     path: ""
