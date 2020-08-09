@@ -18,7 +18,7 @@ Abaixo, abordo temas relacionados ao uso de sistemas de gerenciamento de recurso
 
 {% include toc %}
 
-## SLURM
+# SLURM
 
 O SLURM é um sistema de gerenciamento de recurso computacional. Ele funciona basicamente administrando todas as requisições de recurso feita por todos os usuários de um cluster, as põe em uma fila de prioridade e inicia as requisições quando o recurso estiver disponível.
 
@@ -38,7 +38,7 @@ No caso de um cluster de alto desempenho, como com os que trabalhei no CIMATEC e
 
 **Por que eu estou falando disso tudo no tópico do SLURM?** Basicamente porque é nisso que o SLURM se preocupa. Então o usuário precisa ter noção do hardware que está lidando e como pedir corretamente ao SLURM o recurso que precisa.
 
-### Boas-práticas de requisição
+## Boas-práticas de requisição
 
 Então, para solicitar direitinho, é sempre bom ter em menter se o seu software já está paralelizado e, se estiver, como ele está paralelizado. Esses são dois tipos de paralelização que eu já labutei:
 
@@ -47,6 +47,41 @@ Então, para solicitar direitinho, é sempre bom ter em menter se o seu software
 
 _As duas não são rigidamente intra ou inter, mas essa separação é útil pra se ter uma idea inicial. Também não são exclusivas, ou seja, é possível fazer uso de ambas._
 
-1. Se ele for paralelizado em Threads, você precisa se preocupar então com o número de Threads que você vai querer utilizar na sua requisição do SLURM. Geralmente, os softwares são desenvolvidos pensando num número 1:1 de Threads por [Core](#core) _(ainda não falei de Core, então clica no link aí se já tá curiosa(o))_, então você pode requisitar nós com quantidade X de Cores. Ou basicamete pedir toda a quantidade de cores disponível nos nós, mas lembrando que mais pra frente você vai precisar se preocupar com isso dentro do programa.
+### Paralelização Intra-nó
 
-2. Se for paralelizado em [Processos](https://pt.wikipedia.org/wiki/Processo_(inform%C3%A1tica)), é comum se preocupar com o número de nós que você vai precisar. Isso tem dependência direta com o que seu usuário do SLURM dispõe. É também possível o uso desses Processos como se fossem Intra-nó, mas levando em consideração como esses Processos são criados por cada nó e também tendo em mente que um Processo custa mais caro para um processador do que uma Thread. No mais normal que já vi, se utiliza um Processo por nó (e então cada processo cria suas Threads, etc) e eles então se comunicam para transmitir alguma informação que seja necessária (tipo por internet mesmo, mandando uma mensagem no WhatsApp entre si).
+Se o Software for paralelizado em Threads, você precisa se preocupar com o número de Threads que você vai querer utilizar na sua requisição do SLURM.  
+
+Geralmente, os softwares são desenvolvidos pensando num número 1:1 de Threads por [Core](#core) _(ainda não falei de Core, então clica no link aí se já tá com curiosidade)_, então você pode requisitar nós com quantidade X de Cores. Ou basicamete pedir toda a quantidade de Cores disponível nos nós, mas lembrando que mais pra frente você pode precisar se preocupar com isso dentro do programa.
+
+### Paralelização Inter-nó
+
+Se o Software for paralelizado em [Processos](https://pt.wikipedia.org/wiki/Processo_(inform%C3%A1tica)), é comum se preocupar com o número de nós que você vai precisar. Isso tem dependência direta com o que seu usuário do SLURM dispõe.
+
+É também possível o uso de Processos como se fossem Intra-nó, mas levando em consideração como eles são criados por cada nó e também tendo em mente que um Processo custa mais caro para um processador do que uma Thread. No mais normal que já vi, se utiliza um Processo por nó (e então cada processo cria suas Threads, etc) e eles então se comunicam para transmitir alguma informação que seja necessária (tipo por internet mesmo, mandando um salve no WhatsApp).
+
+---
+
+**Você já sabe quais números vai utilizar?**
+
+Pra saber eles, existe uma dica simples:
+
+1. Seu usuário tem acesso a quais nós do SLURM?
+
+    Você pode olhar as partições do SLURM às quais você tem acesso. Geralmente as partições agrupam nós iguais ou bem semelhantes. Essa informação geralmente é dada pelos administradores do cluster a cada usuário ou você pode perguntar ao Helpdesk, se o cluster possuir um.
+
+2. Esses nós possuem qual Hardware?
+
+    Se essa informação não for dada pela administração do cluster, existe um macete bacana.
+
+    Aloque um nó dessa partição e, quando esse recurso estiver disponível para você, conecte-se a ele e use um comando Linux que lhe dê essa informação. Exemplo com número de Cores:
+
+    ```bash
+    # Solicitando de forma direta o recurso. Esse comando retorna o ID do job alocado
+    salloc -N 1 -p <nome da partição>
+    # Vendo qual nó foi alocado
+    sacct -j <ID do job> -o 'NodeList'
+    # Conectando com o nó alocado
+    ssh <hostname do nó>
+    # Listando o número de cores disponíveis dentro do nó
+    cat /proc/cpuinfo | grep processor | wc -l
+      ```
