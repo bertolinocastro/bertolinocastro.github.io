@@ -21,10 +21,11 @@ gem "wdm", "~> 0.1.1" if Gem.win_platform?
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
+  # gem 'jemoji', '~> 0.12.0'
+  gem 'jemoji'
   # gem "jekyll-archives"
   gem 'jekyll-paginate', '~> 1.1'
   gem 'jekyll-feed', '~> 0.13.0'
-  # gem "kramdown", ">= 2.3.0"
   # gem 'jekyll-sitemap', '~> 1.4'
   # gem 'hawkins', '~> 2.0', '>= 2.0.5' # servers only for livereload (where serving locally)
   gem 'jekyll-polyglot', '~> 1.3', '>= 1.3.3'
