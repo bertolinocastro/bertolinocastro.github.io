@@ -371,7 +371,6 @@ plugins:
   - jekyll-feed
   - jekyll-redirect-from
   # - jekyll-sitemap
-  - jemoji
   - jekyll-minifier
 # mimic GitHub Pages with --safe
 whitelist:
@@ -380,7 +379,6 @@ whitelist:
   # - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
-  - jemoji
 
 
 # Refer to: https://jekyllrb.com/docs/posts/#tags-and-categories
