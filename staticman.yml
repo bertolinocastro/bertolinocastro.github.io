@@ -1,0 +1,102 @@
+# Name of the property. You can have multiple properties with completely
+# different config blocks for different sections of your site.
+# For example, you can have one property to handle comment submission and
+# another one to handle posts.
+comments:
+  # (*) REQUIRED
+  #
+  # Names of the fields the form is allowed to submit. If a field that is
+  # not here is part of the request, an error will be thrown.
+  allowedFields: ["name", "email", "url", "message", "replying_to", "mention"]
+  # allowedFields: ["name", "email", "message", "replying_to_uid"]
+
+  # (*) REQUIRED
+  #
+  # Name of the branch being used. Must match the one sent in the URL of the
+  # request.
+  branch: master
+
+  # Text to use as the commit message or pull request title. Accepts placeholders.
+  commitMessage: "Comment from {fields.name} on {options.slug}"
+
+  # (*) REQUIRED
+  #
+  # Destination path (filename) for the data files. Accepts placeholders.
+  filename: "comment-{@timestamp}-{@id}"
+
+  # The format of the generated data files. Accepted values are "json", "yaml"
+  # or "frontmatter"
+  format: "yaml"
+
+  # List of fields to be populated automatically by Staticman and included in
+  # the data file. Keys are the name of the field. The value can be an object
+  # with a `type` property, which configures the generated field, or any value
+  # to be used directly (e.g. a string, number or array)
+  generatedFields:
+    date:
+      type: date
+      options:
+        format: "iso8601"
+
+  # Whether entries need to be appproved before they are published to the main
+  # branch. If set to `true`, a pull request will be created for your approval.
+  # Otherwise, entries will be published to the main branch automatically.
+  # --> I changed from true to false
+  moderation: false
+
+  # Name of the site. Used in notification emails.
+  name: "Bertolino's Blog"
+
+  # Notification settings. When enabled, users can choose to receive notifications
+  # via email when someone adds a reply or a new comment. This requires an account
+  # with Mailgun, which you can get for free at http://mailgun.com.
+  notifications:
+    # Enable notifications
+    enabled: true
+
+    # fromAddress: "noreply@bertolinocastro.github.io"
+
+    # (!) ENCRYPTED
+    #
+    # Mailgun API key
+    apiKey: "hHuWriZAjdtcblgpCHOA0D7kwKpey7CSRQs0ZmMkyJEm0274mAytafP2053VB7BYO5kU1Fa8+wr0ID9kSW7VrZyQF0DCpTtNzn/DxJyb01pqoaROja0cIq6FlKb6jrFuiJ/KaqfTbpsPw//8vtL88kA1BbcmmunRWrDJfVwVIo0oXhdZQb2TFaSmmzLbLwN5Kd7focnpV2o6EsPLDdCds+EmkYmfYj0ll0WyHhZvLhHtwDVajEwNsZp12KtWz3sggWEzpQFWnU4liMsw58D4XvCAd8L6ekbqrLyx8hQ/wpGbUTRgQnXj5NOMVw30zhc2eV+nQKEu23OpkIgsbCVUhYZRT1k/Q21TJCrf4fp5AWzthpntHGsLOVH6WJw/k2dmrrIYY/Wm75C/KDPhMVBgRywd9wQDHDabub1GNuVgHe/FKpx6KpIpqaB5EAKcKxUMJHdFmm+ouKvPdyCtjvlormUazzONkazRHukmR+ROnSu5VxVdXH6IqasC3KhU3YaMUSJtR5A4aajs8kwC5CJKfjPoc/LidVNUTNCSnZUBQAnzklEUiHRBswFURm1Ngql/3rM5WfqiF/XDxzaNKPFLtjoBlSQKkwJtPcwU1ON9oPn0hKlIxFIqGQU+jiBnbr6d7XfWo93IuI8FJcLHC7Efy3lREi2jHy7ovde/RBs20JI="
+
+    # (!) ENCRYPTED
+    #
+    # Mailgun domain (encrypted)
+    domain: "fbpE8uuA/pigmnH5utn2J5iB0+I1ZHErmbNqEYCLH1TAWy+Bb068kQiUFnKY6BHTvKZyvmxAaK/ZEghI9l767JUrCI5i7hJ4qplkUBt0EwDBmaJEgiPSMt2qWEPhhJcgUZz0WFnaWc8SYPE6YG/nLFAyhrMC/nKoYgEHy8B5QJCqEO/wG7H/LRE138Dk8Eev0DcDjokCsaeob5RPGUoMqAHkIPsETyeBOesCODeBPu7BbGe3i0+RDNrVW5LvQZDR4oultgmMnWoPadSvtP+qoRhRfaWQXCjjN06PhRQXiRIeC1dCT/lehRfP/DKA39ELtDMz18URFmDCIPqfjocKPbptNgCt2DWhWH+kneL/lUPcuNMY/zzunqwSBxm7UZpwWHGBTrCUMCtU9gsXAfHr9aTS/a8yHRMbKa/GNnkGJFsCRvu2e/1k2UdZFTrF94Kd/gkEAEVfG85p31JtLQbFc2B/DRKeBInJitjZdhpr1v61tpf7/n8pxkq1BovINd4uDw/8Kq443ydixrokM8eZEMos2RLB8RcXAjjlynAreANNpvmZoZ49V4lM9pZpYAzSJQ1uf0BWoPX6OTLUKjt2KJpxf3VmfZZKrsdvtqS4oiz9s8l/SnL/evS+QCw+QUzErgx9dUKJIRlNOZX+FVf9UkV3XQTJzxUSE0eLoV7dTew="
+
+  # (*) REQUIRED
+  #
+  # Destination path (directory) for the data files. Accepts placeholders.
+  path: "_data/comments/{options.slug}"
+
+  # Names of required fields. If any of these isn't in the request or is empty,
+  # an error will be thrown.
+  requiredFields: ["name", "email", "message"]
+
+  # List of transformations to apply to any of the fields supplied. Keys are
+  # the name of the field and values are possible transformation types.
+  transforms:
+    email: md5
+
+  reCaptcha:
+    enabled: true
+    siteKey: 6Lc6obAZAAAAAEkW4S3moi8d59wKzL_wj9OvOuA0
+    secret: nmH3CtOvCbgdvGs80Kp61mPGKOsdNECwOLlGcJIS7wI4VHChj+SlBtPLytu+yz0c8pq7dPlr1BjTITQ64LEhPAc3doFUk+gDEMK0ZD1tMjGyNc5Xbu6BUs5JdnE348WZlZQo6v7G1dMEjGk/bDlCFlXFVHD9hRvdgTr60mtQaw9dUihY9NZwTQAZPev/YCOL5hpuo8VWtUolASXy6rdeZCYPeJyr/wN6SPyaIz4/yI3VJ781maPrJwOFVaKU2CQubbAJaGKWwMBpsXCF4qMP251rvhLfBC6zp+Dszqf78mgQB7c0ftboD1ReNs0KKoE4Bh45LhRt7NlzS/GctkR30mgL3WkUbQuQsT/7xdcV9QH2//buQ5YtyhschwApdRRe94c7NXg++GXpT9iEUt31qrXDKaCaERjw2SUOnrKQ0T0fRgfdQo0VtTe7Q36f2BdbhQdURWxfM1irNWO+fVE/6VnChatH46sCi5yptDKYlzV6A6r+G3eDUteFRrG1Huw2MV5q1UdqVAmcGfJA/nGgivxM3rzZYa1h31tXCNoxAIzlXiJnNwxF7W60ffh8ABneGvFEPhMawmPg06BkX/eiRf6fhq3uKUAlFC2vwN+OTEVrYU4bM23IZ5iIO4nrS6tniuJzEAA9bVwJuWSFwmbJG6r4guGBNrn9nl+PqyehQXY=
+    
+notifications:
+  # Enable notifications
+  enabled: true
+
+  # fromAddress: "noreply@bertolinocastro.github.io"
+
+  # (!) ENCRYPTED
+  #
+  # Mailgun API key
+  apiKey: "hHuWriZAjdtcblgpCHOA0D7kwKpey7CSRQs0ZmMkyJEm0274mAytafP2053VB7BYO5kU1Fa8+wr0ID9kSW7VrZyQF0DCpTtNzn/DxJyb01pqoaROja0cIq6FlKb6jrFuiJ/KaqfTbpsPw//8vtL88kA1BbcmmunRWrDJfVwVIo0oXhdZQb2TFaSmmzLbLwN5Kd7focnpV2o6EsPLDdCds+EmkYmfYj0ll0WyHhZvLhHtwDVajEwNsZp12KtWz3sggWEzpQFWnU4liMsw58D4XvCAd8L6ekbqrLyx8hQ/wpGbUTRgQnXj5NOMVw30zhc2eV+nQKEu23OpkIgsbCVUhYZRT1k/Q21TJCrf4fp5AWzthpntHGsLOVH6WJw/k2dmrrIYY/Wm75C/KDPhMVBgRywd9wQDHDabub1GNuVgHe/FKpx6KpIpqaB5EAKcKxUMJHdFmm+ouKvPdyCtjvlormUazzONkazRHukmR+ROnSu5VxVdXH6IqasC3KhU3YaMUSJtR5A4aajs8kwC5CJKfjPoc/LidVNUTNCSnZUBQAnzklEUiHRBswFURm1Ngql/3rM5WfqiF/XDxzaNKPFLtjoBlSQKkwJtPcwU1ON9oPn0hKlIxFIqGQU+jiBnbr6d7XfWo93IuI8FJcLHC7Efy3lREi2jHy7ovde/RBs20JI="
+
+  # (!) ENCRYPTED
+  #
+  # Mailgun domain (encrypted)
+  domain: "fbpE8uuA/pigmnH5utn2J5iB0+I1ZHErmbNqEYCLH1TAWy+Bb068kQiUFnKY6BHTvKZyvmxAaK/ZEghI9l767JUrCI5i7hJ4qplkUBt0EwDBmaJEgiPSMt2qWEPhhJcgUZz0WFnaWc8SYPE6YG/nLFAyhrMC/nKoYgEHy8B5QJCqEO/wG7H/LRE138Dk8Eev0DcDjokCsaeob5RPGUoMqAHkIPsETyeBOesCODeBPu7BbGe3i0+RDNrVW5LvQZDR4oultgmMnWoPadSvtP+qoRhRfaWQXCjjN06PhRQXiRIeC1dCT/lehRfP/DKA39ELtDMz18URFmDCIPqfjocKPbptNgCt2DWhWH+kneL/lUPcuNMY/zzunqwSBxm7UZpwWHGBTrCUMCtU9gsXAfHr9aTS/a8yHRMbKa/GNnkGJFsCRvu2e/1k2UdZFTrF94Kd/gkEAEVfG85p31JtLQbFc2B/DRKeBInJitjZdhpr1v61tpf7/n8pxkq1BovINd4uDw/8Kq443ydixrokM8eZEMos2RLB8RcXAjjlynAreANNpvmZoZ49V4lM9pZpYAzSJQ1uf0BWoPX6OTLUKjt2KJpxf3VmfZZKrsdvtqS4oiz9s8l/SnL/evS+QCw+QUzErgx9dUKJIRlNOZX+FVf9UkV3XQTJzxUSE0eLoV7dTew="
