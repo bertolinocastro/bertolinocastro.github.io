@@ -32,7 +32,7 @@ R: Porque quando você faz uma solicitação ao SLURM, você pede determinado re
 
 **O que são nós?**
 
-R: Pronome pessoal da 1a pessoa do singular :grin:. Brincadeira haha. Se você imaginar um cluster como uma rede (que é composta por [nós](https://pt.wikipedia.org/wiki/V%C3%A9rtice_(teoria_dos_grafos))), cada nó representa algo como se fosse um computador. É como se todos os laptops e celulares das pessoas em sua casa conectados à mesma rede formassem um cluster. E é basicamente isso mesmo. Dá pra você fazer seu cluster pessoal em casa de graça.
+R: Pronome pessoal da 1a pessoa do singular 😆. Brincadeira haha. Se você imaginar um cluster como uma rede (que é composta por [nós](https://pt.wikipedia.org/wiki/V%C3%A9rtice_(teoria_dos_grafos))), cada nó representa algo como se fosse um computador. É como se todos os laptops e celulares das pessoas em sua casa conectados à mesma rede formassem um cluster. E é basicamente isso mesmo. Dá pra você fazer seu cluster pessoal em casa de graça.
 
 No caso de um cluster de alto desempenho, como com os que trabalhei no CIMATEC e os outros com que continuo trabalhando até hoje, cada nó desses é basicamente a placa-mãe de um computador com 1 ou 2 CPUs (podem existir mais, depende do hardware), uma quantidade boa de memória RAM e conexão com todos ou boa parte dos outros nós da rede e também com o sistema de armazenamento persistente compartilhado entre os nós (geralmente são `/home` e `/scratch`).
 

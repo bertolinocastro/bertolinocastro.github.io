@@ -21,8 +21,6 @@ gem "wdm", "~> 0.1.1" if Gem.win_platform?
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
-  # gem 'jemoji', '~> 0.12.0'
-  gem 'jemoji'
   # gem "jekyll-archives"
   gem 'jekyll-paginate', '~> 1.1'
   gem 'jekyll-feed', '~> 0.13.0'
